@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EF4CC151EA8E764007A974A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC141EA8E764007A974A /* AppDelegate.swift */; };
+		3EF4CC1A1EA8E765007A974A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EF4CC181EA8E765007A974A /* Main.storyboard */; };
+		3EF4CC1C1EA8E765007A974A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EF4CC1B1EA8E765007A974A /* Assets.xcassets */; };
+		3EF4CC1F1EA8E765007A974A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EF4CC1D1EA8E765007A974A /* LaunchScreen.storyboard */; };
+		3EF4CC2B1EA8EACE007A974A /* WebServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC2A1EA8EACE007A974A /* WebServiceHelper.swift */; };
+		3EF4CC2D1EA8EADC007A974A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC2C1EA8EADC007A974A /* Reachability.swift */; };
+		3EF4CC2F1EA8EAE7007A974A /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC2E1EA8EAE7007A974A /* HelperMethods.swift */; };
+		3EF4CC311EA8EBD9007A974A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC301EA8EBD9007A974A /* HomeViewController.swift */; };
+		3EF4CC331EA8EC2E007A974A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC321EA8EC2E007A974A /* LoginViewController.swift */; };
+		3EF4CC351EA8EC7D007A974A /* CustomerRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC341EA8EC7D007A974A /* CustomerRegistrationViewController.swift */; };
+		3EF4CC371EA8ECF9007A974A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC361EA8ECF9007A974A /* OptionsViewController.swift */; };
+		3EF4CC391EA8EDB9007A974A /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC381EA8EDB9007A974A /* VehiclesViewController.swift */; };
+		3EF4CC3B1EA8EDF3007A974A /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC3A1EA8EDF3007A974A /* AddVehicleViewController.swift */; };
+		3EF4CC3D1EA8EE97007A974A /* PromotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC3C1EA8EE97007A974A /* PromotionsViewController.swift */; };
+		3EF4CC3F1EA8EEEE007A974A /* ApprovedHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC3E1EA8EEEE007A974A /* ApprovedHistoryViewController.swift */; };
+		3EF4CC411EA8EF3E007A974A /* SearchAuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC401EA8EF3E007A974A /* SearchAuthorizationViewController.swift */; };
+		3EF4CC431EA903D3007A974A /* AddPromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC421EA903D3007A974A /* AddPromotionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3EF4CC111EA8E762007A974A /* ICH Vehicle Servicing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ICH Vehicle Servicing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF4CC141EA8E764007A974A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3EF4CC191EA8E765007A974A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3EF4CC1B1EA8E765007A974A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EF4CC1E1EA8E765007A974A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3EF4CC201EA8E765007A974A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EF4CC2A1EA8EACE007A974A /* WebServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServiceHelper.swift; path = "Helper Classes/WebServiceHelper/WebServiceHelper.swift"; sourceTree = "<group>"; };
+		3EF4CC2C1EA8EADC007A974A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = "Helper Classes/Reachability/Reachability.swift"; sourceTree = "<group>"; };
+		3EF4CC2E1EA8EAE7007A974A /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperMethods.swift; path = "Helper Classes/HelperMethods/HelperMethods.swift"; sourceTree = "<group>"; };
+		3EF4CC301EA8EBD9007A974A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3EF4CC321EA8EC2E007A974A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3EF4CC341EA8EC7D007A974A /* CustomerRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerRegistrationViewController.swift; sourceTree = "<group>"; };
+		3EF4CC361EA8ECF9007A974A /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		3EF4CC381EA8EDB9007A974A /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
+		3EF4CC3A1EA8EDF3007A974A /* AddVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVehicleViewController.swift; sourceTree = "<group>"; };
+		3EF4CC3C1EA8EE97007A974A /* PromotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionsViewController.swift; sourceTree = "<group>"; };
+		3EF4CC3E1EA8EEEE007A974A /* ApprovedHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovedHistoryViewController.swift; sourceTree = "<group>"; };
+		3EF4CC401EA8EF3E007A974A /* SearchAuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAuthorizationViewController.swift; sourceTree = "<group>"; };
+		3EF4CC421EA903D3007A974A /* AddPromotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPromotionViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EF4CC0E1EA8E761007A974A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EF4CC081EA8E75D007A974A = {
+			isa = PBXGroup;
+			children = (
+				3EF4CC131EA8E764007A974A /* ICH Vehicle Servicing */,
+				3EF4CC121EA8E762007A974A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EF4CC121EA8E762007A974A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EF4CC111EA8E762007A974A /* ICH Vehicle Servicing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EF4CC131EA8E764007A974A /* ICH Vehicle Servicing */ = {
+			isa = PBXGroup;
+			children = (
+				3EF4CC261EA8EA1A007A974A /* Helper Classes */,
+				3EF4CC141EA8E764007A974A /* AppDelegate.swift */,
+				3EF4CC301EA8EBD9007A974A /* HomeViewController.swift */,
+				3EF4CC321EA8EC2E007A974A /* LoginViewController.swift */,
+				3EF4CC341EA8EC7D007A974A /* CustomerRegistrationViewController.swift */,
+				3EF4CC361EA8ECF9007A974A /* OptionsViewController.swift */,
+				3EF4CC3C1EA8EE97007A974A /* PromotionsViewController.swift */,
+				3EF4CC421EA903D3007A974A /* AddPromotionViewController.swift */,
+				3EF4CC381EA8EDB9007A974A /* VehiclesViewController.swift */,
+				3EF4CC3A1EA8EDF3007A974A /* AddVehicleViewController.swift */,
+				3EF4CC3E1EA8EEEE007A974A /* ApprovedHistoryViewController.swift */,
+				3EF4CC401EA8EF3E007A974A /* SearchAuthorizationViewController.swift */,
+				3EF4CC181EA8E765007A974A /* Main.storyboard */,
+				3EF4CC1B1EA8E765007A974A /* Assets.xcassets */,
+				3EF4CC1D1EA8E765007A974A /* LaunchScreen.storyboard */,
+				3EF4CC201EA8E765007A974A /* Info.plist */,
+			);
+			path = "ICH Vehicle Servicing";
+			sourceTree = "<group>";
+		};
+		3EF4CC261EA8EA1A007A974A /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3EF4CC291EA8EA51007A974A /* WebServiceHelper */,
+				3EF4CC281EA8EA41007A974A /* Reachability */,
+				3EF4CC271EA8EA28007A974A /* HelperMethods */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		3EF4CC271EA8EA28007A974A /* HelperMethods */ = {
+			isa = PBXGroup;
+			children = (
+				3EF4CC2E1EA8EAE7007A974A /* HelperMethods.swift */,
+			);
+			name = HelperMethods;
+			sourceTree = "<group>";
+		};
+		3EF4CC281EA8EA41007A974A /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				3EF4CC2C1EA8EADC007A974A /* Reachability.swift */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		3EF4CC291EA8EA51007A974A /* WebServiceHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3EF4CC2A1EA8EACE007A974A /* WebServiceHelper.swift */,
+			);
+			name = WebServiceHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EF4CC101EA8E761007A974A /* ICH Vehicle Servicing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EF4CC231EA8E766007A974A /* Build configuration list for PBXNativeTarget "ICH Vehicle Servicing" */;
+			buildPhases = (
+				3EF4CC0D1EA8E761007A974A /* Sources */,
+				3EF4CC0E1EA8E761007A974A /* Frameworks */,
+				3EF4CC0F1EA8E761007A974A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ICH Vehicle Servicing";
+			productName = "ICH Vehicle Servicing";
+			productReference = 3EF4CC111EA8E762007A974A /* ICH Vehicle Servicing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EF4CC091EA8E75D007A974A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = OSS;
+				TargetAttributes = {
+					3EF4CC101EA8E761007A974A = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 3EF4CC0C1EA8E75F007A974A /* Build configuration list for PBXProject "ICH Vehicle Servicing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EF4CC081EA8E75D007A974A;
+			productRefGroup = 3EF4CC121EA8E762007A974A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EF4CC101EA8E761007A974A /* ICH Vehicle Servicing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EF4CC0F1EA8E761007A974A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF4CC1F1EA8E765007A974A /* LaunchScreen.storyboard in Resources */,
+				3EF4CC1C1EA8E765007A974A /* Assets.xcassets in Resources */,
+				3EF4CC1A1EA8E765007A974A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EF4CC0D1EA8E761007A974A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF4CC3F1EA8EEEE007A974A /* ApprovedHistoryViewController.swift in Sources */,
+				3EF4CC3D1EA8EE97007A974A /* PromotionsViewController.swift in Sources */,
+				3EF4CC391EA8EDB9007A974A /* VehiclesViewController.swift in Sources */,
+				3EF4CC3B1EA8EDF3007A974A /* AddVehicleViewController.swift in Sources */,
+				3EF4CC331EA8EC2E007A974A /* LoginViewController.swift in Sources */,
+				3EF4CC371EA8ECF9007A974A /* OptionsViewController.swift in Sources */,
+				3EF4CC311EA8EBD9007A974A /* HomeViewController.swift in Sources */,
+				3EF4CC2B1EA8EACE007A974A /* WebServiceHelper.swift in Sources */,
+				3EF4CC151EA8E764007A974A /* AppDelegate.swift in Sources */,
+				3EF4CC351EA8EC7D007A974A /* CustomerRegistrationViewController.swift in Sources */,
+				3EF4CC2F1EA8EAE7007A974A /* HelperMethods.swift in Sources */,
+				3EF4CC411EA8EF3E007A974A /* SearchAuthorizationViewController.swift in Sources */,
+				3EF4CC431EA903D3007A974A /* AddPromotionViewController.swift in Sources */,
+				3EF4CC2D1EA8EADC007A974A /* Reachability.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3EF4CC181EA8E765007A974A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EF4CC191EA8E765007A974A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3EF4CC1D1EA8E765007A974A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EF4CC1E1EA8E765007A974A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EF4CC211EA8E765007A974A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3EF4CC221EA8E765007A974A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EF4CC241EA8E766007A974A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "ICH Vehicle Servicing/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oss.ICH-Vehicle-Servicing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3EF4CC251EA8E766007A974A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "ICH Vehicle Servicing/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oss.ICH-Vehicle-Servicing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EF4CC0C1EA8E75F007A974A /* Build configuration list for PBXProject "ICH Vehicle Servicing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EF4CC211EA8E765007A974A /* Debug */,
+				3EF4CC221EA8E765007A974A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EF4CC231EA8E766007A974A /* Build configuration list for PBXNativeTarget "ICH Vehicle Servicing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EF4CC241EA8E766007A974A /* Debug */,
+				3EF4CC251EA8E766007A974A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EF4CC091EA8E75D007A974A /* Project object */;
+}
