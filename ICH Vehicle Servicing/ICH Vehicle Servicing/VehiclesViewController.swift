@@ -79,15 +79,16 @@ class VehiclesViewController: UIViewController
     
     func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
     {
-        let vehicleID=Int(vehicleIDsArray[indexPath.row] as! String)!
-        
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in
             
+            self.performSegue(withIdentifier:"EditVehicle", sender:indexPath.row)
         }
         
         let deleteButton=UITableViewRowAction(style:.default, title:"Delete")
         {action, indexPath in
+            
+            let vehicleID=Int(self.vehicleIDsArray[indexPath.row] as! String)!
             
             deleteVehicle(vehicleID:vehicleID, completionHandler:{_ in
             })

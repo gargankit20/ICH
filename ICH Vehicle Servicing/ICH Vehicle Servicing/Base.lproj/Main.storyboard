@@ -356,7 +356,7 @@
                     <navigationItem key="navigationItem" title="Promotions" id="RCQ-t1-qrO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Ae-fX-fln">
                             <connections>
-                                <segue destination="krx-Ux-dBF" kind="push" id="1aA-U2-W2W"/>
+                                <segue destination="krx-Ux-dBF" kind="push" identifier="EditPromotion" id="1aA-U2-W2W"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -456,7 +456,7 @@
                     <navigationItem key="navigationItem" title="Vehicles" id="d6k-Oz-tcS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UK7-fR-lDZ">
                             <connections>
-                                <segue destination="4D0-sc-eIM" kind="push" id="RFG-th-Rwm"/>
+                                <segue destination="4D0-sc-eIM" kind="push" identifier="EditVehicle" id="RFG-th-Rwm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -76,15 +76,16 @@ class PromotionsViewController: UIViewController
     
     func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
     {
-        let promotionID=Int(promotionIDsArray[indexPath.row] as! String)!
-        
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in
             
+            self.performSegue(withIdentifier:"EditPromotion", sender:indexPath.row)
         }
         
         let deleteButton=UITableViewRowAction(style:.default, title:"Delete")
         {action, indexPath in
+            
+            let promotionID=Int(self.promotionIDsArray[indexPath.row] as! String)!
             
             deletePromotion(promotionID:promotionID, completionHandler:{_ in
             })
