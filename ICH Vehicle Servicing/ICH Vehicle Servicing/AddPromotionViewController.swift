@@ -13,6 +13,16 @@ class AddPromotionViewController: UIViewController
     @IBOutlet var productNameTxt:UITextField!
     @IBOutlet var discountTxt:UITextField!
     
+    var productName:String!
+    var discount:String!
+    var promotionID=0
+    
+    override func viewDidLoad()
+    {
+        productNameTxt.text=productName
+        discountTxt.text=discount
+    }
+    
     @IBAction func add()
     {
         if(validateTextFieldsBeforeSubmit())

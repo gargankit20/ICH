@@ -102,4 +102,17 @@ class VehiclesViewController: UIViewController
         
         return [deleteButton, editButton]
     }
+    
+    override func prepare(for segue:UIStoryboardSegue, sender:Any?)
+    {
+        if segue.identifier=="EditVehicle"
+        {
+            let AVVC=segue.destination as! AddVehicleViewController
+            
+            AVVC.vehicleRegistrationNo=vehicleRegistrationNosArray[sender as! Int] as! String
+            AVVC.driverName=driverNamesArray[sender as! Int] as! String
+            AVVC.purchasingLimit=purchasingLimitsArray[sender as! Int] as! String
+            AVVC.vehicleID=Int(vehicleIDsArray[sender as! Int] as! String)!
+        }
+    }
 }

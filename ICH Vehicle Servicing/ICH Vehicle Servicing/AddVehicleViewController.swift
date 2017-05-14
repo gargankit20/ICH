@@ -13,7 +13,19 @@ class AddVehicleViewController: UIViewController
     @IBOutlet var vehicleRegistrationNoTxt:UITextField!
     @IBOutlet var driverNameTxt:UITextField!
     @IBOutlet var purchasingLimitTxt:UITextField!
-        
+    
+    var vehicleRegistrationNo:String!
+    var driverName:String!
+    var purchasingLimit:String!
+    var vehicleID=0
+    
+    override func viewDidLoad()
+    {
+        vehicleRegistrationNoTxt.text=vehicleRegistrationNo
+        driverNameTxt.text=driverName
+        purchasingLimitTxt.text=purchasingLimit
+    }
+    
     @IBAction func add()
     {
         if validateTextFieldsBeforeSubmit()

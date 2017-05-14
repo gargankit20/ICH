@@ -104,4 +104,16 @@ class PromotionsViewController: UIViewController
     {
         return canSwipe
     }
+    
+    override func prepare(for segue:UIStoryboardSegue, sender:Any?)
+    {
+        if segue.identifier=="EditPromotion"
+        {
+            let APVC=segue.destination as! AddPromotionViewController
+            
+            APVC.productName=productNamesArray[sender as! Int] as! String
+            APVC.discount=discountsArray[sender as! Int] as! String
+            APVC.promotionID=Int(promotionIDsArray[sender as! Int] as! String)!
+        }
+    }
 }

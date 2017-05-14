@@ -356,7 +356,7 @@
                     <navigationItem key="navigationItem" title="Promotions" id="RCQ-t1-qrO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Ae-fX-fln">
                             <connections>
-                                <segue destination="krx-Ux-dBF" kind="push" identifier="EditPromotion" id="1aA-U2-W2W"/>
+                                <segue destination="krx-Ux-dBF" kind="push" identifier="" id="1aA-U2-W2W"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -364,6 +364,7 @@
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="promotionsTbl" destination="Flq-y1-9D2" id="DRY-lH-vnM"/>
+                        <segue destination="krx-Ux-dBF" kind="show" identifier="EditPromotion" id="Y7K-67-AaX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TL-wt-vA3" sceneMemberID="firstResponder"/>
@@ -456,7 +457,7 @@
                     <navigationItem key="navigationItem" title="Vehicles" id="d6k-Oz-tcS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UK7-fR-lDZ">
                             <connections>
-                                <segue destination="4D0-sc-eIM" kind="push" identifier="EditVehicle" id="RFG-th-Rwm"/>
+                                <segue destination="4D0-sc-eIM" kind="push" identifier="" id="RFG-th-Rwm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -464,6 +465,7 @@
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="vehiclesTbl" destination="xep-at-nLJ" id="e7w-Yz-BZf"/>
+                        <segue destination="4D0-sc-eIM" kind="show" identifier="EditVehicle" id="6E4-aM-PVW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4T-Kt-lI0" sceneMemberID="firstResponder"/>
@@ -606,7 +608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gt-hO-WwJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="425.60000000000002" y="2706.7466266866568"/>
+            <point key="canvasLocation" x="426" y="2796"/>
         </scene>
         <!--Add Promotion-->
         <scene sceneID="pVN-3g-zq0">
@@ -674,7 +676,9 @@
         <image name="logo" width="450" height="122"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T0j-VH-lOK"/>
         <segue reference="Mq9-Nh-yp8"/>
+        <segue reference="T0j-VH-lOK"/>
+        <segue reference="Y7K-67-AaX"/>
+        <segue reference="6E4-aM-PVW"/>
     </inferredMetricsTieBreakers>
 </document>
