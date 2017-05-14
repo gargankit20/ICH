@@ -15,12 +15,15 @@ class PromotionsViewController: UIViewController
     var productNamesArray=NSMutableArray()
     var discountsArray=NSMutableArray()
     var promotionIDsArray=NSMutableArray()
+    var canSwipe=true
     
     override func viewDidLoad()
     {
         if UserDefaults.standard.integer(forKey:"user")==1
         {
             navigationItem.rightBarButtonItem=nil
+            
+            canSwipe=false
         }
     }
     
@@ -85,5 +88,10 @@ class PromotionsViewController: UIViewController
         editButton.backgroundColor=UIColor.lightGray
         
         return [deleteButton, editButton]
+    }
+    
+    func tableView(_ tableView:UITableView, canEditRowAtIndexPath indexPath:NSIndexPath)->Bool
+    {
+        return canSwipe
     }
 }
