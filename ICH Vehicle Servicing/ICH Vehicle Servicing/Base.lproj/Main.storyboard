@@ -601,6 +601,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
+                        <outlet property="button" destination="g8u-we-OGE" id="7bm-Un-Gdd"/>
                         <outlet property="driverNameTxt" destination="E5f-TL-BgV" id="Nf4-mE-hhG"/>
                         <outlet property="purchasingLimitTxt" destination="8a6-49-rfT" id="FHD-l8-yZw"/>
                         <outlet property="vehicleRegistrationNoTxt" destination="A7P-I6-BZo" id="89H-pb-WnL"/>
@@ -663,6 +664,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
+                        <outlet property="button" destination="a1e-7i-Q1U" id="t4h-Gg-DIR"/>
                         <outlet property="discountTxt" destination="GUc-pU-hqe" id="zqK-B9-7VA"/>
                         <outlet property="productNameTxt" destination="41j-Wa-MlV" id="W3r-vJ-B39"/>
                     </connections>

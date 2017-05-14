@@ -12,6 +12,7 @@ class AddPromotionViewController: UIViewController
 {
     @IBOutlet var productNameTxt:UITextField!
     @IBOutlet var discountTxt:UITextField!
+    @IBOutlet var button:UIButton!
     
     var productName:String!
     var discount:String!
@@ -21,20 +22,40 @@ class AddPromotionViewController: UIViewController
     {
         productNameTxt.text=productName
         discountTxt.text=discount
+        
+        if promotionID>0
+        {
+            button.setTitle("Update Promotion", for:.normal)
+        }
     }
     
     @IBAction func add()
     {
         if(validateTextFieldsBeforeSubmit())
         {
-            addPromotion(productName:productNameTxt.text!, discount:discountTxt.text!, completionHandler:{responseData in
-                
-                let message=responseData["message"] as! String
-                
-                let alertController=createAlert(message:message)
-                self.present(alertController, animated:true, completion:nil)
-            })
+            if promotionID==0
+            {
+                addPromotion(productName:productNameTxt.text!, discount:discountTxt.text!, completionHandler:{responseData in
+                    
+                    self.helperFunction(responseData:responseData)
+                })
+            }
+            else
+            {
+                editPromotion(productName:productNameTxt.text!, discount:discountTxt.text!, promotionID:promotionID, completionHandler:{responseData in
+                    
+                    self.helperFunction(responseData:responseData)
+                })
+            }
         }
+    }
+    
+    func helperFunction(responseData:NSDictionary)
+    {
+        let message=responseData["message"] as! String
+        
+        let alertController=createAlert(message:message)
+        self.present(alertController, animated:true, completion:nil)
     }
     
     func validateTextFieldsBeforeSubmit()->Bool

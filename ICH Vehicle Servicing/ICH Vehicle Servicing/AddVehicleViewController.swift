@@ -13,6 +13,7 @@ class AddVehicleViewController: UIViewController
     @IBOutlet var vehicleRegistrationNoTxt:UITextField!
     @IBOutlet var driverNameTxt:UITextField!
     @IBOutlet var purchasingLimitTxt:UITextField!
+    @IBOutlet var button:UIButton!
     
     var vehicleRegistrationNo:String!
     var driverName:String!
@@ -24,6 +25,11 @@ class AddVehicleViewController: UIViewController
         vehicleRegistrationNoTxt.text=vehicleRegistrationNo
         driverNameTxt.text=driverName
         purchasingLimitTxt.text=purchasingLimit
+        
+        if vehicleID>0
+        {
+            button.setTitle("Update Vehicle", for:.normal)
+        }
     }
     
     @IBAction func add()
@@ -32,14 +38,29 @@ class AddVehicleViewController: UIViewController
         {
             let customerID=UserDefaults.standard.integer(forKey:"loggedInUserID")
             
-            addVehicle(registrationNo:vehicleRegistrationNoTxt.text!, driverName:driverNameTxt.text!, purchasingLimit:purchasingLimitTxt.text!, customerID:customerID, completionHandler:{responseData in
-                
-                let message=responseData["message"] as! String
-                
-                let alertController=createAlert(message:message)
-                self.present(alertController, animated:true, completion:nil)
-            })
+            if vehicleID==0
+            {
+                addVehicle(registrationNo:vehicleRegistrationNoTxt.text!, driverName:driverNameTxt.text!, purchasingLimit:purchasingLimitTxt.text!, customerID:customerID, completionHandler:{responseData in
+                    
+                    self.helperFunction(responseData:responseData)
+                })
+            }
+            else
+            {
+                editVehicle(registrationNo:vehicleRegistrationNoTxt.text!, driverName:driverNameTxt.text!, purchasingLimit:purchasingLimitTxt.text!, vehicleID:vehicleID, completionHandler:{responseData in
+                    
+                    self.helperFunction(responseData:responseData)
+                })
+            }
         }
+    }
+    
+    func helperFunction(responseData:NSDictionary)
+    {
+        let message=responseData["message"] as! String
+        
+        let alertController=createAlert(message:message)
+        self.present(alertController, animated:true, completion:nil)
     }
     
     func validateTextFieldsBeforeSubmit()->Bool
