@@ -48,6 +48,7 @@ class LoginViewController: UIViewController
     func helperFunction(responseData:NSDictionary)
     {
         let code=responseData["code"] as! Int
+        
         if code==200
         {
             let loggedInUserID=responseData["user_id"] as! Int
@@ -65,6 +66,7 @@ class LoginViewController: UIViewController
     {
         var alertController:UIAlertController?
         var validate=true
+        
         if !validateEmail(email:emailTxt.text!)
         {
             alertController=createAlert(message:"Please enter a valid email")

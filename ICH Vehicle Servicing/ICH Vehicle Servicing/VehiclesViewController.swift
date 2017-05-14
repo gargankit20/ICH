@@ -35,6 +35,7 @@ class VehiclesViewController: UIViewController
         vehicleIDsArray.removeAllObjects()
         
         getVehicles(customerID:customerID, completionHandler:{responseData in
+            
             self.parseData(responseData:responseData)
         })
     }
@@ -80,10 +81,12 @@ class VehiclesViewController: UIViewController
     {
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in
+            
         }
         
         let deleteButton=UITableViewRowAction(style:.default, title:"Delete")
         {action, indexPath in
+            
             tableView.deleteRows(at:[indexPath], with:.automatic)
         }
         

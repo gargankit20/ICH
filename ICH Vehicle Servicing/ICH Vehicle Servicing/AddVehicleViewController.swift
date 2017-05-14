@@ -34,6 +34,7 @@ class AddVehicleViewController: UIViewController
     {
         var alertController:UIAlertController?
         var validate=true
+        
         if vehicleRegistrationNoTxt.text==""
         {
             alertController=createAlert(message:"Please enter vehicle registration number")

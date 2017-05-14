@@ -34,6 +34,7 @@ class PromotionsViewController: UIViewController
         promotionIDsArray.removeAllObjects()
         
         getPromotions(completionHandler:{responseData in
+            
             self.parseData(responseData:responseData)
         })
     }
@@ -82,6 +83,7 @@ class PromotionsViewController: UIViewController
         
         let deleteButton=UITableViewRowAction(style:.default, title:"Delete")
         {action, indexPath in
+            
             tableView.deleteRows(at:[indexPath], with:.automatic)
         }
         

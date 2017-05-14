@@ -31,6 +31,7 @@ class AddPromotionViewController: UIViewController
     {
         var alertController:UIAlertController?
         var validate=true
+        
         if productNameTxt.text==""
         {
             alertController=createAlert(message:"Please enter product name")

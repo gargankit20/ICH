@@ -22,6 +22,7 @@ class CustomerRegistrationViewController: UIViewController
             customerRegistration(email:emailTxt.text!, password:passwordTxt.text!, username:usernameTxt.text!, completionHandler:{responseData in
                 
                 let code=responseData["code"] as! Int
+                
                 if(code==200)
                 {
                     let loggedInUserID=responseData["user_id"] as! Int
@@ -41,6 +42,7 @@ class CustomerRegistrationViewController: UIViewController
     {
         var alertController:UIAlertController?
         var validate=true
+        
         if !validateEmail(email:emailTxt.text!)
         {
             alertController=createAlert(message:"Please enter a valid email")
