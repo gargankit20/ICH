@@ -52,7 +52,7 @@ class ApprovedHistoryViewController: UIViewController
     {
         let cell=tableView.dequeueReusableCell(withIdentifier:"Cell")!
         
-cell.textLabel?.text=authorizationNosArray[indexPath.row] as? String
+        cell.textLabel?.text=authorizationNosArray[indexPath.row] as? String
         cell.detailTextLabel?.text=approvalDatesArray[indexPath.row] as? String
         
         return cell

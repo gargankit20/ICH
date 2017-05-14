@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddVehicleViewController: UIViewController, UITextFieldDelegate
+class AddVehicleViewController: UIViewController
 {
     @IBOutlet var vehicleRegistrationNoTxt:UITextField!
     @IBOutlet var driverNameTxt:UITextField!

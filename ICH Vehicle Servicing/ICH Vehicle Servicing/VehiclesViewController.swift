@@ -76,17 +76,19 @@ class VehiclesViewController: UIViewController
         return cell
     }
     
-    func tableView(tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
+    func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
     {
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in
         }
+        
         let deleteButton=UITableViewRowAction(style:.default, title:"Delete")
         {action, indexPath in
             tableView.deleteRows(at:[indexPath], with:.automatic)
         }
-        editButton.backgroundColor=UIColor.darkGray
         
-        return [editButton, deleteButton]
+        editButton.backgroundColor=UIColor.lightGray
+        
+        return [deleteButton, editButton]
     }
 }

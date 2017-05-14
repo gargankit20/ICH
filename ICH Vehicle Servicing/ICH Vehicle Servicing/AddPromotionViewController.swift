@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPromotionViewController: UIViewController, UITextFieldDelegate
+class AddPromotionViewController: UIViewController
 {
     @IBOutlet var productNameTxt:UITextField!
     @IBOutlet var discountTxt:UITextField!

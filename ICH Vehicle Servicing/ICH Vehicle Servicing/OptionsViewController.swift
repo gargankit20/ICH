@@ -30,7 +30,7 @@ class OptionsViewController: UIViewController
     {
         if UserDefaults.standard.integer(forKey:"user")==0
         {
-        performSegue(withIdentifier:"GoToSearchAuthorization", sender:nil)
+            performSegue(withIdentifier:"GoToSearchAuthorization", sender:nil)
         }
         else
         {
