@@ -79,6 +79,8 @@ class VehiclesViewController: UIViewController
     
     func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
     {
+        let vehicleID=vehicleIDsArray[indexPath.row] as! String
+        
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in
             
@@ -86,6 +88,11 @@ class VehiclesViewController: UIViewController
         
         let deleteButton=UITableViewRowAction(style:.default, title:"Delete")
         {action, indexPath in
+            
+            deleteVehicle(vehicleID:vehicleID, completionHandler:{_ in
+            })
+            
+            self.vehicleIDsArray.removeObject(at:indexPath.row)
             
             tableView.deleteRows(at:[indexPath], with:.automatic)
         }

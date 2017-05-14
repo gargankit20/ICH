@@ -98,7 +98,7 @@ func addPromotion(productName:String, discount:String, completionHandler:@escapi
     })
 }
 
-func deletePromotion(promotionID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func deletePromotion(promotionID:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="deletePromotion.php?promotion_id=\(promotionID)"
     
@@ -134,7 +134,7 @@ func getVehicles(customerID:Int, completionHandler:@escaping(_ responseData:NSDi
     })
 }
 
-func deleteVehicle(vehicleID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func deleteVehicle(vehicleID:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="deleteVehicle.php?vehicle_id=\(vehicleID)"
     

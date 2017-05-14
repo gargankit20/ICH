@@ -76,6 +76,8 @@ class PromotionsViewController: UIViewController
     
     func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
     {
+        let promotionID=promotionIDsArray[indexPath.row] as! String
+        
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in
             
@@ -83,6 +85,11 @@ class PromotionsViewController: UIViewController
         
         let deleteButton=UITableViewRowAction(style:.default, title:"Delete")
         {action, indexPath in
+            
+            deletePromotion(promotionID:promotionID, completionHandler:{_ in
+            })
+            
+            self.promotionIDsArray.removeObject(at:indexPath.row)
             
             tableView.deleteRows(at:[indexPath], with:.automatic)
         }
