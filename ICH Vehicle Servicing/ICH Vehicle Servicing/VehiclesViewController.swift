@@ -79,7 +79,7 @@ class VehiclesViewController: UIViewController
     
     func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
     {
-        let vehicleID=vehicleIDsArray[indexPath.row] as! String
+        let vehicleID=Int(vehicleIDsArray[indexPath.row] as! String)!
         
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in

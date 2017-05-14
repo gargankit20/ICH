@@ -76,7 +76,7 @@ class PromotionsViewController: UIViewController
     
     func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
     {
-        let promotionID=promotionIDsArray[indexPath.row] as! String
+        let promotionID=Int(promotionIDsArray[indexPath.row] as! String)!
         
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in
