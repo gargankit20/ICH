@@ -32,7 +32,7 @@ class CustomerRegistrationViewController: UIViewController
                 else
                 {
                     let alertController=createAlert(message:"Email is already exist")
-                    self.present(alertController, animated:true, completion:nil)
+                    self.present(alertController, animated:true)
                 }
             })
         }
@@ -66,7 +66,7 @@ class CustomerRegistrationViewController: UIViewController
         
         if let alert=alertController
         {
-            present(alert, animated:true, completion:nil)
+            present(alert, animated:true)
         }
         
         return validate

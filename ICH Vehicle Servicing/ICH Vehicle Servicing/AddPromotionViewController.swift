@@ -55,7 +55,7 @@ class AddPromotionViewController: UIViewController
         let message=responseData["message"] as! String
         
         let alertController=createAlert(message:message)
-        self.present(alertController, animated:true, completion:nil)
+        self.present(alertController, animated:true)
     }
     
     func validateTextFieldsBeforeSubmit()->Bool
@@ -76,7 +76,7 @@ class AddPromotionViewController: UIViewController
         
         if let alert=alertController
         {
-            present(alert, animated:true, completion:nil)
+            present(alert, animated:true)
         }
         
         return validate

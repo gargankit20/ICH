@@ -58,7 +58,7 @@ class LoginViewController: UIViewController
         else
         {
             let alertController=createAlert(message:"Invalid credentials")
-            present(alertController, animated:true, completion:nil)
+            present(alertController, animated:true)
         }
     }
     
@@ -80,7 +80,7 @@ class LoginViewController: UIViewController
         
         if let alert=alertController
         {
-            present(alert, animated:true, completion:nil)
+            present(alert, animated:true)
         }
         
         return validate

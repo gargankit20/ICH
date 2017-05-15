@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E642D9C1ECA02A400F598DC /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E642D9B1ECA02A400F598DC /* ForgotPasswordViewController.swift */; };
 		3EF4CC151EA8E764007A974A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF4CC141EA8E764007A974A /* AppDelegate.swift */; };
 		3EF4CC1A1EA8E765007A974A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EF4CC181EA8E765007A974A /* Main.storyboard */; };
 		3EF4CC1C1EA8E765007A974A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EF4CC1B1EA8E765007A974A /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E642D9B1ECA02A400F598DC /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		3EF4CC111EA8E762007A974A /* ICH Vehicle Servicing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ICH Vehicle Servicing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF4CC141EA8E764007A974A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EF4CC191EA8E765007A974A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				3EF4CC141EA8E764007A974A /* AppDelegate.swift */,
 				3EF4CC301EA8EBD9007A974A /* HomeViewController.swift */,
 				3EF4CC321EA8EC2E007A974A /* LoginViewController.swift */,
+				3E642D9B1ECA02A400F598DC /* ForgotPasswordViewController.swift */,
 				3EF4CC341EA8EC7D007A974A /* CustomerRegistrationViewController.swift */,
 				3EF4CC361EA8ECF9007A974A /* OptionsViewController.swift */,
 				3EF4CC3C1EA8EE97007A974A /* PromotionsViewController.swift */,
@@ -215,6 +218,7 @@
 				3EF4CC151EA8E764007A974A /* AppDelegate.swift in Sources */,
 				3EF4CC351EA8EC7D007A974A /* CustomerRegistrationViewController.swift in Sources */,
 				3EF4CC2F1EA8EAE7007A974A /* HelperMethods.swift in Sources */,
+				3E642D9C1ECA02A400F598DC /* ForgotPasswordViewController.swift in Sources */,
 				3EF4CC411EA8EF3E007A974A /* SearchAuthorizationViewController.swift in Sources */,
 				3EF4CC431EA903D3007A974A /* AddPromotionViewController.swift in Sources */,
 				3EF4CC2D1EA8EADC007A974A /* Reachability.swift in Sources */,
