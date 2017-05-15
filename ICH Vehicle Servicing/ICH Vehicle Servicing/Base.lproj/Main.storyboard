@@ -555,7 +555,7 @@
             </objects>
             <point key="canvasLocation" x="425.60000000000002" y="2169.7151424287858"/>
         </scene>
-        <!--Approved History-->
+        <!--Approved Request-->
         <scene sceneID="uns-gC-q2G">
             <objects>
                 <viewController id="wPH-Af-2Z5" customClass="ApprovedHistoryViewController" customModule="ICH_Vehicle_Servicing" customModuleProvider="target" sceneMemberID="viewController">
@@ -618,7 +618,7 @@
                             <constraint firstItem="XgB-1B-WKn" firstAttribute="top" secondItem="app-xq-AiX" secondAttribute="bottom" id="w5X-Z2-CzQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Approved History" id="51H-At-8Xm"/>
+                    <navigationItem key="navigationItem" title="Approved Request" id="51H-At-8Xm"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
