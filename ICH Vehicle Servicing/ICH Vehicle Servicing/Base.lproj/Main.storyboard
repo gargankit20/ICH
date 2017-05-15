@@ -62,15 +62,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001.6" y="434.48275862068971"/>
+            <point key="canvasLocation" x="998" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KXa-aH-ZQm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rzQ-zg-nmy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="efg-45-KPu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -82,7 +80,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMS-dT-OiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="-110"/>
+            <point key="canvasLocation" x="1001" y="-716"/>
         </scene>
         <!--Login-->
         <scene sceneID="Uzh-vP-e05">
@@ -171,8 +169,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="2dh-I0-bwh"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="emailTxt" destination="Vzn-Yk-Rqy" id="d97-zF-vYa"/>
                         <outlet property="forgotPasswordButton" destination="Bvl-6U-1Yp" id="K78-Pw-fiu"/>
@@ -183,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fwx-SD-Gol" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001.6" y="971.51424287856082"/>
+            <point key="canvasLocation" x="998" y="898"/>
         </scene>
         <!--Signup-->
         <scene sceneID="hUL-fV-tdE">
@@ -276,8 +272,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Signup" id="bc4-Uu-4N9"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="confirmPasswordTxt" destination="psf-Gb-RF8" id="8Nt-X8-heW"/>
                         <outlet property="emailTxt" destination="uKv-TQ-z1m" id="Gan-xh-pFY"/>
@@ -288,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ava-cH-b02" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649.5999999999999" y="971.51424287856082"/>
+            <point key="canvasLocation" x="1871" y="898"/>
         </scene>
         <!--Options View Controller-->
         <scene sceneID="s0z-LF-GOm">
@@ -353,8 +347,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lyp-nt-gAd"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="firstButton" destination="6Jm-Vd-rJt" id="YLg-yz-7IS"/>
                         <segue destination="41a-EA-tg3" kind="push" identifier="GoToSearchAuthorization" id="Xjb-nO-8IP"/>
@@ -363,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70J-I8-ADh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001.6" y="1571.5142428785609"/>
+            <point key="canvasLocation" x="999" y="1749"/>
         </scene>
         <!--Promotions-->
         <scene sceneID="Ial-Jk-1AQ">
@@ -435,8 +427,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="promotionsTbl" destination="Flq-y1-9D2" id="DRY-lH-vnM"/>
                         <segue destination="krx-Ux-dBF" kind="show" identifier="EditPromotion" id="Y7K-67-AaX"/>
@@ -444,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TL-wt-vA3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561.5999999999999" y="2169.7151424287858"/>
+            <point key="canvasLocation" x="1823" y="2699"/>
         </scene>
         <!--Search Authorization View Controller-->
         <scene sceneID="gqj-K2-3Ah">
@@ -467,12 +457,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="mls-kV-D9k"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxZ-JV-S6m" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1670" y="1572"/>
+            <point key="canvasLocation" x="1873" y="1749"/>
         </scene>
         <!--Vehicles-->
         <scene sceneID="ocG-P8-whX">
@@ -544,8 +532,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="vehiclesTbl" destination="xep-at-nLJ" id="e7w-Yz-BZf"/>
                         <segue destination="4D0-sc-eIM" kind="show" identifier="EditVehicle" id="6E4-aM-PVW"/>
@@ -553,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4T-Kt-lI0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="425.60000000000002" y="2169.7151424287858"/>
+            <point key="canvasLocation" x="139" y="2699"/>
         </scene>
         <!--Approved Request-->
         <scene sceneID="uns-gC-q2G">
@@ -619,15 +605,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Approved Request" id="51H-At-8Xm"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="historyTbl" destination="app-xq-AiX" id="pFr-tX-5jq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqu-QP-C2d" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001.6" y="2169.7151424287858"/>
+            <point key="canvasLocation" x="998" y="2699"/>
         </scene>
         <!--Add Vehicle-->
         <scene sceneID="tiK-zi-ylA">
@@ -707,8 +691,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Vehicle" id="bje-6t-FmS"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="button" destination="g8u-we-OGE" id="7bm-Un-Gdd"/>
                         <outlet property="driverNameTxt" destination="E5f-TL-BgV" id="Nf4-mE-hhG"/>
@@ -718,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gt-hO-WwJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="426" y="2796"/>
+            <point key="canvasLocation" x="139" y="3521"/>
         </scene>
         <!--Add Promotion-->
         <scene sceneID="pVN-3g-zq0">
@@ -785,8 +767,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Promotion" id="pHy-ug-VID"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="button" destination="a1e-7i-Q1U" id="t4h-Gg-DIR"/>
                         <outlet property="discountTxt" destination="GUc-pU-hqe" id="zqK-B9-7VA"/>
@@ -795,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eio-M1-rba" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561.5999999999999" y="2706.7466266866568"/>
+            <point key="canvasLocation" x="1823" y="3520"/>
         </scene>
     </scenes>
     <resources>
