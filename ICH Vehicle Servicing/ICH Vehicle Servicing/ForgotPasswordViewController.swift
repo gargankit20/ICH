@@ -10,5 +10,22 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController
 {
+    @IBAction func forgotPassword()
+    {
+        if validateEmail(email:emailTxt.text!)
+        {
+            
+        }
+        else
+        {
+            let alertController=createAlert(message:"Please enter a valid email")
+            present(alertController, animated:true)
+        }
+    }
     
+    func textFieldShouldReturn(_ textField:UITextField)->Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
 }

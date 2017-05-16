@@ -57,7 +57,7 @@ func customerRegistration(email:String, password:String, username:String, comple
 {
     let endPoint="email=\(email)&password=\(password)&username=\(username)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
-    sendRequest(endPoint:"customerRegistration.php?\(endPoint)", completionHandler:{(responseData) in
+    sendRequest(endPoint:"customerRegistration.php?\(endPoint)", completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -66,7 +66,7 @@ func customerLogin(email:String, password:String, completionHandler:@escaping(_ 
 {
     let endPoint="customerLogin.php?email=\(email)&password=\(password)"
     
-    sendRequest(endPoint:endPoint, completionHandler:{(responseData) in
+    sendRequest(endPoint:endPoint, completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -75,7 +75,7 @@ func supplierLogin(email:String, password:String, completionHandler:@escaping(_ 
 {
     let endPoint="supplierLogin.php?email=\(email)&password=\(password)"
     
-    sendRequest(endPoint:endPoint, completionHandler:{(responseData) in
+    sendRequest(endPoint:endPoint, completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -84,7 +84,7 @@ func getPromotions(completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="getPromotions.php?supplier_id=1"
     
-    sendRequest(endPoint:endPoint, completionHandler:{(responseData) in
+    sendRequest(endPoint:endPoint, completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -93,7 +93,7 @@ func addPromotion(productName:String, discount:String, completionHandler:@escapi
 {
     let endPoint="product_name=\(productName)&discount=\(discount)&supplier_id=1".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
-    sendRequest(endPoint:"addPromotion.php?\(endPoint)", completionHandler:{(responseData) in
+    sendRequest(endPoint:"addPromotion.php?\(endPoint)", completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -102,7 +102,7 @@ func deletePromotion(promotionID:Int, completionHandler:@escaping(_ responseData
 {
     let endPoint="deletePromotion.php?promotion_id=\(promotionID)"
     
-    sendRequest(endPoint:endPoint, completionHandler:{(responseData) in
+    sendRequest(endPoint:endPoint, completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -111,7 +111,7 @@ func editPromotion(productName:String, discount:String, promotionID:Int, complet
 {
     let endPoint="product_name=\(productName)&discount=\(discount)&promotion_id=\(promotionID)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
-    sendRequest(endPoint:"editPromotion.php?\(endPoint)", completionHandler:{(responseData) in
+    sendRequest(endPoint:"editPromotion.php?\(endPoint)", completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -120,7 +120,7 @@ func addVehicle(registrationNo:String, driverName:String, purchasingLimit:String
 {
     let endPoint="registration_no=\(registrationNo)&driver_name=\(driverName)&purchasing_limit=\(purchasingLimit)&customer_id=\(customerID)&supplier_id=1".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
-    sendRequest(endPoint:"addVehicle.php?\(endPoint)", completionHandler:{(responseData) in
+    sendRequest(endPoint:"addVehicle.php?\(endPoint)", completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -129,7 +129,7 @@ func getVehicles(customerID:Int, completionHandler:@escaping(_ responseData:NSDi
 {
     let endPoint="getVehicles.php?customer_id=\(customerID)"
     
-    sendRequest(endPoint:endPoint, completionHandler:{(responseData) in
+    sendRequest(endPoint:endPoint, completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -138,7 +138,7 @@ func deleteVehicle(vehicleID:Int, completionHandler:@escaping(_ responseData:NSD
 {
     let endPoint="deleteVehicle.php?vehicle_id=\(vehicleID)"
     
-    sendRequest(endPoint:endPoint, completionHandler:{(responseData) in
+    sendRequest(endPoint:endPoint, completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -147,7 +147,7 @@ func editVehicle(registrationNo:String, driverName:String, purchasingLimit:Strin
 {
     let endPoint="registration_no=\(registrationNo)&driver_name=\(driverName)&purchasing_limit=\(purchasingLimit)&vehicle_id=\(vehicleID)&supplier_id=1".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
-    sendRequest(endPoint:"editVehicle.php?\(endPoint)", completionHandler:{(responseData) in
+    sendRequest(endPoint:"editVehicle.php?\(endPoint)", completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
@@ -156,7 +156,16 @@ func getApprovalHistory(userID:Int, identifier:Int, completionHandler:@escaping(
 {
     let endPoint="getApprovalHistory.php?user_id=\(userID)&identifier=\(identifier)"
     
-    sendRequest(endPoint:endPoint, completionHandler:{(responseData) in
+    sendRequest(endPoint:endPoint, completionHandler:{responseData in
+        completionHandler(responseData)
+    })
+}
+
+func getPassword(email:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+{
+    let endPoint="getPassword.php?email=\(email)"
+    
+    sendRequest(endPoint:endPoint, completionHandler:{responseData in
         completionHandler(responseData)
     })
 }
