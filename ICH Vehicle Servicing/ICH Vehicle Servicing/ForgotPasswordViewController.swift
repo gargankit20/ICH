@@ -10,11 +10,19 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController
 {
+    @IBOutlet var emailTxt:UITextField!
+    
     @IBAction func forgotPassword()
     {
         if validateEmail(email:emailTxt.text!)
         {
-            
+            getPassword(email:emailTxt.text!, completionHandler:{responseData in
+                
+                let message=responseData["message"] as! String
+                
+                let alertController=createAlert(message:message)
+                self.present(alertController, animated:true)
+            })
         }
         else
         {

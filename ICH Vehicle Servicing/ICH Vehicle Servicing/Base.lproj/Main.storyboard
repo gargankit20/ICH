@@ -109,7 +109,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <connections>
-                                    <outlet property="delegate" destination="Ats-P7-fJ4" id="WdV-2C-KZK"/>
+                                    <outlet property="delegate" destination="hPP-gi-2dZ" id="eWa-wa-ztY"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMm-LH-izB">
@@ -135,6 +135,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Forgot Password" id="C2c-Vi-2O1"/>
+                    <connections>
+                        <outlet property="emailTxt" destination="et3-w6-ZKt" id="rnb-Dw-Q9i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3A-Xj-ifw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
