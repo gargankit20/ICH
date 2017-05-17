@@ -10,8 +10,117 @@ import UIKit
 
 class SearchAuthorizationViewController: UIViewController
 {
-    override func viewDidLoad()
+    @IBOutlet var vehicleRegistrationNoTxt:UITextField!
+    @IBOutlet var driverLbl:UILabel!
+    @IBOutlet var driverNameLbl:UILabel!
+    @IBOutlet var limitLbl:UILabel!
+    @IBOutlet var limitValueLbl:UILabel!
+    @IBOutlet var wouldYouLikeToAuthorizeLbl:UILabel!
+    @IBOutlet var authorizationNumber:UILabel!
+    @IBOutlet var authorizationNumberValue:UILabel!
+    @IBOutlet var yesButton:UIButton!
+    @IBOutlet var noButton:UIButton!
+    @IBOutlet var saveButton:UIButton!
+    
+    var vehicleID:Int!
+    var authorizationNo:String!
+    
+    @IBAction func yes()
     {
+        generateAuthorizationNo()
         
+        authorizationNumberValue.text=authorizationNo
+        hideAuthorizationDetail(isHide:false)
+    }
+    
+    @IBAction func no()
+    {
+        vehicleRegistrationNoTxt.text=""
+        hideVehicleDetail(isHide:true)
+        hideAuthorizationDetail(isHide:true)
+    }
+    
+    @IBAction func save()
+    {
+        approveVehicleRegistration(vehicleID:vehicleID, authorizationNo:authorizationNo, completionHandler:{responseData in
+            
+            let message=responseData["message"] as! String
+            
+            let alertController=createAlert(message:message)
+            self.present(alertController, animated:true)
+            
+            self.no()
+        })
+    }
+    
+    func textFieldShouldReturn(_ textField:UITextField)->Bool
+    {
+        searchVehicle(registrationNo:vehicleRegistrationNoTxt.text!, completionHandler:{responseData in
+            
+            self.parseData(responseData:responseData)
+        })
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func parseData(responseData:NSDictionary)
+    {
+        let code=responseData["code"] as! Int
+        
+        if code==200
+        {
+            vehicleID=responseData["vehicle_id"] as! Int
+            
+            driverNameLbl.text=responseData["driver_name"] as? String
+            limitValueLbl.text=responseData["purchasing_limit"] as? String
+            
+            hideVehicleDetail(isHide:false)
+        }
+        else
+        {
+            let message=responseData["message"] as! String
+            
+            let alertController=createAlert(message:message)
+            present(alertController, animated:true)
+            
+            hideVehicleDetail(isHide:true)
+        }
+        
+        hideAuthorizationDetail(isHide:true)
+    }
+    
+    func hideVehicleDetail(isHide:Bool)
+    {
+        driverLbl.isHidden=isHide
+        driverNameLbl.isHidden=isHide
+        limitLbl.isHidden=isHide
+        limitValueLbl.isHidden=isHide
+        wouldYouLikeToAuthorizeLbl.isHidden=isHide
+        yesButton.isHidden=isHide
+        noButton.isHidden=isHide
+    }
+    
+    func hideAuthorizationDetail(isHide:Bool)
+    {
+        authorizationNumber.isHidden=isHide
+        authorizationNumberValue.isHidden=isHide
+        saveButton.isHidden=isHide
+    }
+    
+    func generateAuthorizationNo()
+    {
+        let formatter=DateFormatter()
+        formatter.dateFormat="ddMMyyyy"
+        
+        authorizationNo="ANK\(formatter.string(from:Date()))\(randomLetter())\(vehicleRegistrationNoTxt.text!)"
+    }
+    
+    func randomLetter()->String
+    {
+        let uppercaseLetters=Array(97...122).map{String(UnicodeScalar($0))}
+        
+        let randomIndex=arc4random_uniform(UInt32(uppercaseLetters.count))
+        return uppercaseLetters[Int(randomIndex)]
     }
 }

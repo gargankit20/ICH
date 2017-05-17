@@ -18,10 +18,12 @@ class OptionsViewController: UIViewController
         
         if UserDefaults.standard.integer(forKey:"user")==0
         {
+            self.title="Supplier"
             firstButton.setTitle("Search Authorization", for:.normal)
         }
         else
         {
+            self.title="Customer"
             firstButton.setTitle("My Vehicles", for:.normal)
         }
     }

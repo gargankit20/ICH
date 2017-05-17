@@ -107,7 +107,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                 <connections>
                                     <outlet property="delegate" destination="hPP-gi-2dZ" id="eWa-wa-ztY"/>
                                 </connections>
@@ -168,7 +168,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                 <connections>
                                     <outlet property="delegate" destination="Ats-P7-fJ4" id="9dr-OE-TpX"/>
                                 </connections>
@@ -179,7 +179,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="Ats-P7-fJ4" id="6yM-gK-3gW"/>
                                 </connections>
@@ -270,7 +270,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                 <connections>
                                     <outlet property="delegate" destination="aJZ-NZ-I1x" id="czU-2U-rDF"/>
                                 </connections>
@@ -281,7 +281,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="aJZ-NZ-I1x" id="ENi-r1-weX"/>
                                 </connections>
@@ -292,7 +292,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="aJZ-NZ-I1x" id="DQz-Uo-FgS"/>
                                 </connections>
@@ -303,7 +303,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="aJZ-NZ-I1x" id="dXE-XH-uGB"/>
                                 </connections>
@@ -500,7 +500,7 @@
             </objects>
             <point key="canvasLocation" x="1823" y="2699"/>
         </scene>
-        <!--Search Authorization View Controller-->
+        <!--Search Authorization-->
         <scene sceneID="gqj-K2-3Ah">
             <objects>
                 <viewController id="41a-EA-tg3" customClass="SearchAuthorizationViewController" customModule="ICH_Vehicle_Servicing" customModuleProvider="target" sceneMemberID="viewController">
@@ -517,14 +517,113 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vehicle Registration Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-y4-nRx">
+                                <frame key="frameInset" minX="20" minY="190" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="41a-EA-tg3" id="peI-zl-vq2"/>
+                                </connections>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Driver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um6-M0-pVa">
+                                <frame key="frameInset" minX="20" minY="225" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ankit Garg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuE-Sr-leU">
+                                <frame key="frameInset" minX="100" minY="225" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Limit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spc-IG-bjw">
+                                <frame key="frameInset" minX="20" minY="260" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="500$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kla-P6-pQC">
+                                <frame key="frameInset" minX="100" minY="260" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Would you like to authorize?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwg-R6-h7f">
+                                <frame key="frameInset" minX="20" minY="295" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnM-ka-v1Q">
+                                <frame key="frameInset" minX="20" minY="330" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Yes"/>
+                                <connections>
+                                    <action selector="yes" destination="41a-EA-tg3" eventType="touchUpInside" id="uce-4P-nel"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ch8-b3-Xt9">
+                                <frame key="frameInset" minX="80" minY="330" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="No"/>
+                                <connections>
+                                    <action selector="no" destination="41a-EA-tg3" eventType="touchUpInside" id="eMm-OT-13v"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Authorization Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yi-ND-h7z">
+                                <frame key="frameInset" minX="20" minY="370" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Authorization Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsb-iq-mHr">
+                                <frame key="frameInset" minX="20" minY="405" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zik-yn-vO3">
+                                <frame key="frameInset" minX="135" minY="440" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save" destination="41a-EA-tg3" eventType="touchUpInside" id="jQ9-Zf-Jc7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mls-kV-D9k"/>
+                    <navigationItem key="navigationItem" title="Search Authorization" id="mls-kV-D9k"/>
+                    <connections>
+                        <outlet property="authorizationNumber" destination="0Yi-ND-h7z" id="fu8-xb-Nxr"/>
+                        <outlet property="authorizationNumberValue" destination="Vsb-iq-mHr" id="nh9-Nr-bcE"/>
+                        <outlet property="driverLbl" destination="um6-M0-pVa" id="0QK-ny-L1r"/>
+                        <outlet property="driverNameLbl" destination="NuE-Sr-leU" id="jse-Xb-k66"/>
+                        <outlet property="limitLbl" destination="Spc-IG-bjw" id="5GX-KS-zU6"/>
+                        <outlet property="limitValueLbl" destination="kla-P6-pQC" id="K00-j9-4Cl"/>
+                        <outlet property="noButton" destination="Ch8-b3-Xt9" id="5mJ-w9-8He"/>
+                        <outlet property="saveButton" destination="zik-yn-vO3" id="fT9-Gp-VhU"/>
+                        <outlet property="vehicleRegistrationNoTxt" destination="pfm-y4-nRx" id="bLC-2c-dhw"/>
+                        <outlet property="wouldYouLikeToAuthorizeLbl" destination="rwg-R6-h7f" id="Qwn-0s-H7r"/>
+                        <outlet property="yesButton" destination="xnM-ka-v1Q" id="0Vi-m8-AiM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxZ-JV-S6m" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="1749"/>
+            <point key="canvasLocation" x="1871.25" y="1748.75"/>
         </scene>
         <!--Vehicles-->
         <scene sceneID="ocG-P8-whX">
@@ -702,7 +801,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="4D0-sc-eIM" id="ldH-UW-jTp"/>
                                 </connections>
@@ -713,7 +812,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="4D0-sc-eIM" id="jzR-fD-18X"/>
                                 </connections>
@@ -724,7 +823,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="4D0-sc-eIM" id="DG4-IQ-kvr"/>
                                 </connections>
@@ -791,7 +890,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="krx-Ux-dBF" id="Me0-NB-Srg"/>
                                 </connections>
@@ -802,7 +901,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="krx-Ux-dBF" id="BO4-WK-JyF"/>
                                 </connections>
@@ -848,9 +947,9 @@
         <image name="supplier" width="372" height="85"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T0j-VH-lOK"/>
-        <segue reference="U5U-70-zT7"/>
         <segue reference="Y7K-67-AaX"/>
+        <segue reference="U5U-70-zT7"/>
+        <segue reference="T0j-VH-lOK"/>
         <segue reference="6E4-aM-PVW"/>
     </inferredMetricsTieBreakers>
 </document>

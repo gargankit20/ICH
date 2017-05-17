@@ -169,3 +169,21 @@ func getPassword(email:String, completionHandler:@escaping(_ responseData:NSDict
         completionHandler(responseData)
     })
 }
+
+func searchVehicle(registrationNo:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+{
+    let endPoint="registration_no=\(registrationNo)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
+    
+    sendRequest(endPoint:"searchVehicle.php?\(endPoint)", completionHandler:{responseData in
+        completionHandler(responseData)
+    })
+}
+
+func approveVehicleRegistration(vehicleID:Int, authorizationNo:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+{
+    let endPoint="approveVehicleRegistration.php?vehicle_id=\(vehicleID)&authorization_no=\(authorizationNo)"
+    
+    sendRequest(endPoint:endPoint, completionHandler:{responseData in
+        completionHandler(responseData)
+    })
+}
