@@ -39,4 +39,9 @@ class OptionsViewController: UIViewController
             performSegue(withIdentifier:"GoToVehicles", sender:nil)
         }
     }
+    
+    @IBAction func logout()
+    {
+        
+    }
 }
