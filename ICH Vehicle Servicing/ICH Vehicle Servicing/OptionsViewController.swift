@@ -42,6 +42,9 @@ class OptionsViewController: UIViewController
     
     @IBAction func logout()
     {
+        let appDomain=Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName:appDomain)
         
+        navigationController!.popViewController(animated:true)
     }
 }
