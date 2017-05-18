@@ -30,14 +30,14 @@ class SearchAuthorizationViewController: UIViewController
         generateAuthorizationNo()
         
         authorizationNumberValue.text=authorizationNo
-        hideAuthorizationDetail(isHide:false)
+        hideAuthorizationDetail(false)
     }
     
     @IBAction func no()
     {
         vehicleRegistrationNoTxt.text=""
-        hideVehicleDetail(isHide:true)
-        hideAuthorizationDetail(isHide:true)
+        hideVehicleDetail(true)
+        hideAuthorizationDetail(true)
     }
     
     @IBAction func save()
@@ -46,7 +46,7 @@ class SearchAuthorizationViewController: UIViewController
             
             let message=responseData["message"] as! String
             
-            let alertController=createAlert(message:message)
+            let alertController=createAlert(message)
             self.present(alertController, animated:true)
             
             self.no()
@@ -75,22 +75,22 @@ class SearchAuthorizationViewController: UIViewController
             driverNameLbl.text=responseData["driver_name"] as? String
             limitValueLbl.text=responseData["purchasing_limit"] as? String
             
-            hideVehicleDetail(isHide:false)
+            hideVehicleDetail(false)
         }
         else
         {
             let message=responseData["message"] as! String
             
-            let alertController=createAlert(message:message)
+            let alertController=createAlert(message)
             present(alertController, animated:true)
             
-            hideVehicleDetail(isHide:true)
+            hideVehicleDetail(true)
         }
         
-        hideAuthorizationDetail(isHide:true)
+        hideAuthorizationDetail(true)
     }
     
-    func hideVehicleDetail(isHide:Bool)
+    func hideVehicleDetail(_ isHide:Bool)
     {
         driverLbl.isHidden=isHide
         driverNameLbl.isHidden=isHide
@@ -101,7 +101,7 @@ class SearchAuthorizationViewController: UIViewController
         noButton.isHidden=isHide
     }
     
-    func hideAuthorizationDetail(isHide:Bool)
+    func hideAuthorizationDetail(_ isHide:Bool)
     {
         authorizationNumber.isHidden=isHide
         authorizationNumberValue.isHidden=isHide

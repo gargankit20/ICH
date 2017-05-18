@@ -31,7 +31,7 @@ class CustomerRegistrationViewController: UIViewController
                 }
                 else
                 {
-                    let alertController=createAlert(message:"Email is already exist")
+                    let alertController=createAlert("Email is already exist")
                     self.present(alertController, animated:true)
                 }
             })
@@ -43,24 +43,24 @@ class CustomerRegistrationViewController: UIViewController
         var alertController:UIAlertController?
         var validate=true
         
-        if !validateEmail(email:emailTxt.text!)
+        if !validateEmail(emailTxt.text!)
         {
-            alertController=createAlert(message:"Please enter a valid email")
+            alertController=createAlert("Please enter a valid email")
             validate=false
         }
         else if passwordTxt.text==""
         {
-            alertController=createAlert(message:"Please enter your password")
+            alertController=createAlert("Please enter your password")
             validate=false
         }
         else if usernameTxt.text==""
         {
-            alertController=createAlert(message:"Please enter your user name")
+            alertController=createAlert("Please enter your user name")
             validate=false
         }
         else if !(confirmPasswordTxt.text==passwordTxt.text)
         {
-            alertController=createAlert(message:"Please make sure your password and repeat password are the same")
+            alertController=createAlert("Please make sure your password and repeat password are the same")
             validate=false
         }
         

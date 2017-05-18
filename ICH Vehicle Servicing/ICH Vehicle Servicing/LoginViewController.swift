@@ -57,7 +57,7 @@ class LoginViewController: UIViewController
         }
         else
         {
-            let alertController=createAlert(message:"Invalid credentials")
+            let alertController=createAlert("Invalid credentials")
             present(alertController, animated:true)
         }
     }
@@ -67,14 +67,14 @@ class LoginViewController: UIViewController
         var alertController:UIAlertController?
         var validate=true
         
-        if !validateEmail(email:emailTxt.text!)
+        if !validateEmail(emailTxt.text!)
         {
-            alertController=createAlert(message:"Please enter a valid email")
+            alertController=createAlert("Please enter a valid email")
             validate=false
         }
         else if passwordTxt.text==""
         {
-            alertController=createAlert(message:"Please enter your password")
+            alertController=createAlert("Please enter your password")
             validate=false
         }
         

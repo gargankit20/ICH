@@ -59,7 +59,7 @@ class AddVehicleViewController: UIViewController
     {
         let message=responseData["message"] as! String
         
-        let alertController=createAlert(message:message)
+        let alertController=createAlert(message)
         self.present(alertController, animated:true)
     }
     
@@ -70,17 +70,17 @@ class AddVehicleViewController: UIViewController
         
         if vehicleRegistrationNoTxt.text==""
         {
-            alertController=createAlert(message:"Please enter vehicle registration number")
+            alertController=createAlert("Please enter vehicle registration number")
             validate=false
         }
         else if driverNameTxt.text==""
         {
-            alertController=createAlert(message:"Please enter driver name")
+            alertController=createAlert("Please enter driver name")
             validate=false
         }
         else if purchasingLimitTxt.text==""
         {
-            alertController=createAlert(message:"Please enter purchasing limit")
+            alertController=createAlert("Please enter purchasing limit")
             validate=false
         }
         

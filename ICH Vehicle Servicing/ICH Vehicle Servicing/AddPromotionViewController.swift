@@ -54,7 +54,7 @@ class AddPromotionViewController: UIViewController
     {
         let message=responseData["message"] as! String
         
-        let alertController=createAlert(message:message)
+        let alertController=createAlert(message)
         self.present(alertController, animated:true)
     }
     
@@ -65,12 +65,12 @@ class AddPromotionViewController: UIViewController
         
         if productNameTxt.text==""
         {
-            alertController=createAlert(message:"Please enter product name")
+            alertController=createAlert("Please enter product name")
             validate=false
         }
         else if discountTxt.text==""
         {
-            alertController=createAlert(message:"Please enter discount")
+            alertController=createAlert("Please enter discount")
             validate=false
         }
         
