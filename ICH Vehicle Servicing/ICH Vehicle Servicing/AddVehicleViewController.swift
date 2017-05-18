@@ -40,14 +40,14 @@ class AddVehicleViewController: UIViewController
             
             if vehicleID==0
             {
-                addVehicle(vehicleRegistrationNoTxt.text!, driverNameTxt.text!, purchasingLimitTxt.text!, customerID, completionHandler:{responseData in
+                addVehicle(vehicleRegistrationNoTxt.text!, driverNameTxt.text!, purchasingLimitTxt.text!, customerID, {responseData in
                     
                     self.helperFunction(responseData)
                 })
             }
             else
             {
-                editVehicle(vehicleRegistrationNoTxt.text!, driverNameTxt.text!, purchasingLimitTxt.text!, vehicleID, completionHandler:{responseData in
+                editVehicle(vehicleRegistrationNoTxt.text!, driverNameTxt.text!, purchasingLimitTxt.text!, vehicleID, {responseData in
                     
                     self.helperFunction(responseData)
                 })

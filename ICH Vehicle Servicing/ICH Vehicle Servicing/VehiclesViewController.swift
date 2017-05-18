@@ -34,7 +34,7 @@ class VehiclesViewController: UIViewController
         purchasingLimitsArray.removeAllObjects()
         vehicleIDsArray.removeAllObjects()
         
-        getVehicles(customerID, completionHandler:{responseData in
+        getVehicles(customerID, {responseData in
             
             self.parseData(responseData)
         })
@@ -90,7 +90,7 @@ class VehiclesViewController: UIViewController
             
             let vehicleID=Int(self.vehicleIDsArray[indexPath.row] as! String)!
             
-            deleteVehicle(vehicleID, completionHandler:{_ in
+            deleteVehicle(vehicleID, {_ in
             })
             
             self.vehicleIDsArray.removeObject(at:indexPath.row)

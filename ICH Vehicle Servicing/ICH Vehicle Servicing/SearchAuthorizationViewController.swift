@@ -42,7 +42,7 @@ class SearchAuthorizationViewController: UIViewController
     
     @IBAction func save()
     {
-        approveVehicleRegistration(vehicleID, authorizationNo, completionHandler:{responseData in
+        approveVehicleRegistration(vehicleID, authorizationNo, {responseData in
             
             let message=responseData["message"] as! String
             
@@ -55,7 +55,7 @@ class SearchAuthorizationViewController: UIViewController
     
     func textFieldShouldReturn(_ textField:UITextField)->Bool
     {
-        searchVehicle(vehicleRegistrationNoTxt.text!, completionHandler:{responseData in
+        searchVehicle(vehicleRegistrationNoTxt.text!, {responseData in
             
             self.parseData(responseData)
         })

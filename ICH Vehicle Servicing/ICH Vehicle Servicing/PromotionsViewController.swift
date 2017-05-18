@@ -33,7 +33,7 @@ class PromotionsViewController: UIViewController
         discountsArray.removeAllObjects()
         promotionIDsArray.removeAllObjects()
         
-        getPromotions(completionHandler:{responseData in
+        getPromotions({responseData in
             
             self.parseData(responseData)
         })
@@ -87,7 +87,7 @@ class PromotionsViewController: UIViewController
             
             let promotionID=Int(self.promotionIDsArray[indexPath.row] as! String)!
             
-            deletePromotion(promotionID, completionHandler:{_ in
+            deletePromotion(promotionID, {_ in
             })
             
             self.promotionIDsArray.removeObject(at:indexPath.row)

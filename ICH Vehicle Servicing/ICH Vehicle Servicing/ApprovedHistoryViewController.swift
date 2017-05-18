@@ -20,7 +20,7 @@ class ApprovedHistoryViewController: UIViewController
         let userID=UserDefaults.standard.integer(forKey:"loggedInUserID")
         let identifier=UserDefaults.standard.integer(forKey:"user")
         
-        getApprovalHistory(userID:userID, identifier:identifier, completionHandler:{responseData in
+        getApprovalHistory(userID, identifier, {responseData in
             
             self.parseData(responseData)
         })

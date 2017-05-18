@@ -16,7 +16,7 @@ class ForgotPasswordViewController: UIViewController
     {
         if validateEmail(emailTxt.text!)
         {
-            getPassword(emailTxt.text!, completionHandler:{responseData in
+            getPassword(emailTxt.text!, {responseData in
                 
                 let message=responseData["message"] as! String
                 
