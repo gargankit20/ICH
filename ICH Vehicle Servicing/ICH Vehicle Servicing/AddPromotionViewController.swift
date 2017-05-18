@@ -35,14 +35,14 @@ class AddPromotionViewController: UIViewController
         {
             if promotionID==0
             {
-                addPromotion(productName:productNameTxt.text!, discount:discountTxt.text!, completionHandler:{responseData in
+                addPromotion(productNameTxt.text!, discountTxt.text!, completionHandler:{responseData in
                     
                     self.helperFunction(responseData)
                 })
             }
             else
             {
-                editPromotion(productName:productNameTxt.text!, discount:discountTxt.text!, promotionID:promotionID, completionHandler:{responseData in
+                editPromotion(productNameTxt.text!, discountTxt.text!, promotionID, completionHandler:{responseData in
                     
                     self.helperFunction(responseData)
                 })

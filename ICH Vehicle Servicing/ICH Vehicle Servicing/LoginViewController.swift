@@ -30,14 +30,14 @@ class LoginViewController: UIViewController
         {
             if UserDefaults.standard.integer(forKey:"user")==0
             {
-                supplierLogin(email:emailTxt.text!, password:passwordTxt.text!, completionHandler:{responseData in
+                supplierLogin(emailTxt.text!, passwordTxt.text!, completionHandler:{responseData in
                     
                     self.helperFunction(responseData)
                 })
             }
             else
             {
-                customerLogin(email:emailTxt.text!, password:passwordTxt.text!, completionHandler:{responseData in
+                customerLogin(emailTxt.text!, passwordTxt.text!, completionHandler:{responseData in
                     
                     self.helperFunction(responseData)
                 })

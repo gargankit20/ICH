@@ -87,7 +87,7 @@ class PromotionsViewController: UIViewController
             
             let promotionID=Int(self.promotionIDsArray[indexPath.row] as! String)!
             
-            deletePromotion(promotionID:promotionID, completionHandler:{_ in
+            deletePromotion(promotionID, completionHandler:{_ in
             })
             
             self.promotionIDsArray.removeObject(at:indexPath.row)

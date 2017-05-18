@@ -53,7 +53,7 @@ func sendRequest(endPoint:String, completionHandler:@escaping(_ responseData:NSD
     }
 }
 
-func customerRegistration(email:String, password:String, username:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func customerRegistration(_ email:String, _ password:String, _ username:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="email=\(email)&password=\(password)&username=\(username)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
@@ -62,7 +62,7 @@ func customerRegistration(email:String, password:String, username:String, comple
     })
 }
 
-func customerLogin(email:String, password:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func customerLogin(_ email:String, _ password:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="customerLogin.php?email=\(email)&password=\(password)"
     
@@ -71,7 +71,7 @@ func customerLogin(email:String, password:String, completionHandler:@escaping(_ 
     })
 }
 
-func supplierLogin(email:String, password:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func supplierLogin(_ email:String, _ password:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="supplierLogin.php?email=\(email)&password=\(password)"
     
@@ -89,7 +89,7 @@ func getPromotions(completionHandler:@escaping(_ responseData:NSDictionary)->())
     })
 }
 
-func addPromotion(productName:String, discount:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func addPromotion(_ productName:String, _ discount:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="product_name=\(productName)&discount=\(discount)&supplier_id=1".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
@@ -98,7 +98,7 @@ func addPromotion(productName:String, discount:String, completionHandler:@escapi
     })
 }
 
-func deletePromotion(promotionID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func deletePromotion(_ promotionID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="deletePromotion.php?promotion_id=\(promotionID)"
     
@@ -107,7 +107,7 @@ func deletePromotion(promotionID:Int, completionHandler:@escaping(_ responseData
     })
 }
 
-func editPromotion(productName:String, discount:String, promotionID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func editPromotion(_ productName:String, _ discount:String, _ promotionID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="product_name=\(productName)&discount=\(discount)&promotion_id=\(promotionID)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
@@ -116,7 +116,7 @@ func editPromotion(productName:String, discount:String, promotionID:Int, complet
     })
 }
 
-func addVehicle(registrationNo:String, driverName:String, purchasingLimit:String, customerID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func addVehicle(_ registrationNo:String, _ driverName:String, _ purchasingLimit:String, _ customerID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="registration_no=\(registrationNo)&driver_name=\(driverName)&purchasing_limit=\(purchasingLimit)&customer_id=\(customerID)&supplier_id=1".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
@@ -125,7 +125,7 @@ func addVehicle(registrationNo:String, driverName:String, purchasingLimit:String
     })
 }
 
-func getVehicles(customerID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func getVehicles(_ customerID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="getVehicles.php?customer_id=\(customerID)"
     
@@ -134,7 +134,7 @@ func getVehicles(customerID:Int, completionHandler:@escaping(_ responseData:NSDi
     })
 }
 
-func deleteVehicle(vehicleID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func deleteVehicle(_ vehicleID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="deleteVehicle.php?vehicle_id=\(vehicleID)"
     
@@ -143,7 +143,7 @@ func deleteVehicle(vehicleID:Int, completionHandler:@escaping(_ responseData:NSD
     })
 }
 
-func editVehicle(registrationNo:String, driverName:String, purchasingLimit:String, vehicleID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func editVehicle(_ registrationNo:String, _ driverName:String, _ purchasingLimit:String, _ vehicleID:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="registration_no=\(registrationNo)&driver_name=\(driverName)&purchasing_limit=\(purchasingLimit)&vehicle_id=\(vehicleID)&supplier_id=1".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
@@ -152,7 +152,7 @@ func editVehicle(registrationNo:String, driverName:String, purchasingLimit:Strin
     })
 }
 
-func getApprovalHistory(userID:Int, identifier:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func getApprovalHistory(_ userID:Int, _ identifier:Int, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="getApprovalHistory.php?user_id=\(userID)&identifier=\(identifier)"
     
@@ -161,7 +161,7 @@ func getApprovalHistory(userID:Int, identifier:Int, completionHandler:@escaping(
     })
 }
 
-func getPassword(email:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func getPassword(_ email:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="getPassword.php?email=\(email)"
     
@@ -170,7 +170,7 @@ func getPassword(email:String, completionHandler:@escaping(_ responseData:NSDict
     })
 }
 
-func searchVehicle(registrationNo:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func searchVehicle(_ registrationNo:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="registration_no=\(registrationNo)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
@@ -179,7 +179,7 @@ func searchVehicle(registrationNo:String, completionHandler:@escaping(_ response
     })
 }
 
-func approveVehicleRegistration(vehicleID:Int, authorizationNo:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
+func approveVehicleRegistration(_ vehicleID:Int, _ authorizationNo:String, completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="approveVehicleRegistration.php?vehicle_id=\(vehicleID)&authorization_no=\(authorizationNo)"
     

@@ -19,7 +19,7 @@ class CustomerRegistrationViewController: UIViewController
     {
         if(validateTextFieldsBeforeSubmit())
         {
-            customerRegistration(email:emailTxt.text!, password:passwordTxt.text!, username:usernameTxt.text!, completionHandler:{responseData in
+            customerRegistration(emailTxt.text!, passwordTxt.text!, usernameTxt.text!, completionHandler:{responseData in
                 
                 let code=responseData["code"] as! Int
                 
