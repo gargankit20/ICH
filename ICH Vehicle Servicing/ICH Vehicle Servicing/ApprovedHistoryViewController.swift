@@ -22,11 +22,11 @@ class ApprovedHistoryViewController: UIViewController
         
         getApprovalHistory(userID:userID, identifier:identifier, completionHandler:{responseData in
             
-            self.parseData(responseData:responseData)
+            self.parseData(responseData)
         })
     }
     
-    func parseData(responseData:NSDictionary)
+    func parseData(_ responseData:NSDictionary)
     {
         let approvalhistory=responseData["approvalhistory"] as! NSArray
         

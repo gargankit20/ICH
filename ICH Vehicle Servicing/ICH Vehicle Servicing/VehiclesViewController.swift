@@ -36,11 +36,11 @@ class VehiclesViewController: UIViewController
         
         getVehicles(customerID:customerID, completionHandler:{responseData in
             
-            self.parseData(responseData:responseData)
+            self.parseData(responseData)
         })
     }
     
-    func parseData(responseData:NSDictionary)
+    func parseData(_ responseData:NSDictionary)
     {
         let vehicles=responseData["vehicles"] as! NSArray
         

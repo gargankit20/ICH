@@ -35,11 +35,11 @@ class PromotionsViewController: UIViewController
         
         getPromotions(completionHandler:{responseData in
             
-            self.parseData(responseData:responseData)
+            self.parseData(responseData)
         })
     }
     
-    func parseData(responseData:NSDictionary)
+    func parseData(_ responseData:NSDictionary)
     {
         let promotions=responseData["promotions"] as! NSArray
         

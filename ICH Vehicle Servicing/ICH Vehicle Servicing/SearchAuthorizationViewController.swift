@@ -57,14 +57,14 @@ class SearchAuthorizationViewController: UIViewController
     {
         searchVehicle(registrationNo:vehicleRegistrationNoTxt.text!, completionHandler:{responseData in
             
-            self.parseData(responseData:responseData)
+            self.parseData(responseData)
         })
         
         textField.resignFirstResponder()
         return true
     }
     
-    func parseData(responseData:NSDictionary)
+    func parseData(_ responseData:NSDictionary)
     {
         let code=responseData["code"] as! Int
         

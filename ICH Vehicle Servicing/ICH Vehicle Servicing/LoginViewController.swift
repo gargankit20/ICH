@@ -32,20 +32,20 @@ class LoginViewController: UIViewController
             {
                 supplierLogin(email:emailTxt.text!, password:passwordTxt.text!, completionHandler:{responseData in
                     
-                    self.helperFunction(responseData:responseData)
+                    self.helperFunction(responseData)
                 })
             }
             else
             {
                 customerLogin(email:emailTxt.text!, password:passwordTxt.text!, completionHandler:{responseData in
                     
-                    self.helperFunction(responseData:responseData)
+                    self.helperFunction(responseData)
                 })
             }
         }
     }
     
-    func helperFunction(responseData:NSDictionary)
+    func helperFunction(_ responseData:NSDictionary)
     {
         let code=responseData["code"] as! Int
         

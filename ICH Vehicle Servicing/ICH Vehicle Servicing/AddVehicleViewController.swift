@@ -42,20 +42,20 @@ class AddVehicleViewController: UIViewController
             {
                 addVehicle(registrationNo:vehicleRegistrationNoTxt.text!, driverName:driverNameTxt.text!, purchasingLimit:purchasingLimitTxt.text!, customerID:customerID, completionHandler:{responseData in
                     
-                    self.helperFunction(responseData:responseData)
+                    self.helperFunction(responseData)
                 })
             }
             else
             {
                 editVehicle(registrationNo:vehicleRegistrationNoTxt.text!, driverName:driverNameTxt.text!, purchasingLimit:purchasingLimitTxt.text!, vehicleID:vehicleID, completionHandler:{responseData in
                     
-                    self.helperFunction(responseData:responseData)
+                    self.helperFunction(responseData)
                 })
             }
         }
     }
     
-    func helperFunction(responseData:NSDictionary)
+    func helperFunction(_ responseData:NSDictionary)
     {
         let message=responseData["message"] as! String
         

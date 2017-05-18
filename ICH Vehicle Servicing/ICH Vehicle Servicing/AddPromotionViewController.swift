@@ -37,20 +37,20 @@ class AddPromotionViewController: UIViewController
             {
                 addPromotion(productName:productNameTxt.text!, discount:discountTxt.text!, completionHandler:{responseData in
                     
-                    self.helperFunction(responseData:responseData)
+                    self.helperFunction(responseData)
                 })
             }
             else
             {
                 editPromotion(productName:productNameTxt.text!, discount:discountTxt.text!, promotionID:promotionID, completionHandler:{responseData in
                     
-                    self.helperFunction(responseData:responseData)
+                    self.helperFunction(responseData)
                 })
             }
         }
     }
     
-    func helperFunction(responseData:NSDictionary)
+    func helperFunction(_ responseData:NSDictionary)
     {
         let message=responseData["message"] as! String
         
