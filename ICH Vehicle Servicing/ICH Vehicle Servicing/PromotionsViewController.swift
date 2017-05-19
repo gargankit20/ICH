@@ -64,7 +64,7 @@ class PromotionsViewController: UIViewController
         return promotionIDsArray.count
     }
     
-    func tableView(_ tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath)->UITableViewCell
+    func tableView(_ tableView:UITableView, cellForRowAtIndexPath indexPath:IndexPath)->UITableViewCell
     {
         let cell=tableView.dequeueReusableCell(withIdentifier:"Cell")!
         
@@ -74,7 +74,7 @@ class PromotionsViewController: UIViewController
         return cell
     }
     
-    func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
+    func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:IndexPath)->[UITableViewRowAction]?
     {
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in
@@ -100,7 +100,7 @@ class PromotionsViewController: UIViewController
         return [deleteButton, editButton]
     }
     
-    func tableView(_ tableView:UITableView, canEditRowAtIndexPath indexPath:NSIndexPath)->Bool
+    func tableView(_ tableView:UITableView, canEditRowAtIndexPath indexPath:IndexPath)->Bool
     {
         return canSwipe
     }

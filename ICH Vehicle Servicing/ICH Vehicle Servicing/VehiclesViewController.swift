@@ -8,6 +8,13 @@
 
 import UIKit
 
+class VehicleCell: UITableViewCell
+{
+    @IBOutlet var driverNameLbl:UILabel!
+    @IBOutlet var vehicleRegistrationNoLbl:UILabel!
+    @IBOutlet var purchasingLimitLbl:UILabel!
+}
+
 class VehiclesViewController: UIViewController
 {
     @IBOutlet var vehiclesTbl:UITableView!
@@ -67,17 +74,18 @@ class VehiclesViewController: UIViewController
         return vehicleIDsArray.count
     }
     
-    func tableView(_ tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath)->UITableViewCell
+    func tableView(_ tableView:UITableView, cellForRowAtIndexPath indexPath:IndexPath)->UITableViewCell
     {
-        let cell=tableView.dequeueReusableCell(withIdentifier:"Cell")!
+        let cell=tableView.dequeueReusableCell(withIdentifier:"VehicleCell") as! VehicleCell
         
-        cell.textLabel?.text=driverNamesArray[indexPath.row] as? String
-        cell.detailTextLabel?.text=vehicleRegistrationNosArray[indexPath.row] as? String
+        cell.driverNameLbl.text=driverNamesArray[indexPath.row] as? String
+        cell.vehicleRegistrationNoLbl.text=vehicleRegistrationNosArray[indexPath.row] as? String
+        cell.purchasingLimitLbl.text=purchasingLimitsArray[indexPath.row] as? String
         
         return cell
     }
     
-    func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:NSIndexPath)->[UITableViewRowAction]?
+    func tableView(_ tableView:UITableView, editActionsForRowAtIndexPath indexPath:IndexPath)->[UITableViewRowAction]?
     {
         let editButton=UITableViewRowAction(style:.default, title:"Edit")
         {action, indexPath in

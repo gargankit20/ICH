@@ -49,7 +49,7 @@ class ApprovedHistoryViewController: UIViewController
         return authorizationNosArray.count
     }
     
-    func tableView(_ tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath)->UITableViewCell
+    func tableView(_ tableView:UITableView, cellForRowAtIndexPath indexPath:IndexPath)->UITableViewCell
     {
         let cell=tableView.dequeueReusableCell(withIdentifier:"Cell")!
         
