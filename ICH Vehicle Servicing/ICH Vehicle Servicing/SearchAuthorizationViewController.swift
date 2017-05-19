@@ -66,12 +66,7 @@ class SearchAuthorizationViewController: UIViewController
     
     func textField(_ textField:UITextField, shouldChangeCharactersInRange range:NSRange, replacementString string:String)->Bool
     {
-        if string==" "
-        {
-            return false
-        }
-        
-        return true
+        return string==" " ? false : true
     }
 
     func parseData(_ responseData:NSDictionary)
