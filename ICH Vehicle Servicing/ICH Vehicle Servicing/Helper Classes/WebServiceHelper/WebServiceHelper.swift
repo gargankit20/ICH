@@ -172,9 +172,9 @@ func getPassword(_ email:String, _ completionHandler:@escaping(_ responseData:NS
 
 func searchVehicle(_ registrationNo:String, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
-    let endPoint="registration_no=\(registrationNo)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
+    let endPoint="searchVehicle.php?registration_no=\(registrationNo)"
     
-    sendRequest("searchVehicle.php?\(endPoint)", {responseData in
+    sendRequest(endPoint, {responseData in
         completionHandler(responseData)
     })
 }

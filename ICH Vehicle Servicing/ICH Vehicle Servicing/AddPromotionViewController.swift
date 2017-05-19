@@ -52,10 +52,7 @@ class AddPromotionViewController: UIViewController
     
     func helperFunction(_ responseData:NSDictionary)
     {
-        let message=responseData["message"] as! String
-        
-        let alertController=createAlert(message)
-        self.present(alertController, animated:true)
+        navigationController!.popViewController(animated:true)
     }
     
     func validateTextFieldsBeforeSubmit()->Bool

@@ -57,10 +57,7 @@ class AddVehicleViewController: UIViewController
     
     func helperFunction(_ responseData:NSDictionary)
     {
-        let message=responseData["message"] as! String
-        
-        let alertController=createAlert(message)
-        self.present(alertController, animated:true)
+        navigationController!.popViewController(animated:true)
     }
     
     func validateTextFieldsBeforeSubmit()->Bool
@@ -95,6 +92,19 @@ class AddVehicleViewController: UIViewController
     func textFieldShouldReturn(_ textField:UITextField)->Bool
     {
         textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(_ textField:UITextField, shouldChangeCharactersInRange range:NSRange, replacementString string:String)->Bool
+    {
+        if textField==vehicleRegistrationNoTxt
+        {
+            if string==" "
+            {
+                return false
+            }
+        }
+        
         return true
     }
 }
