@@ -14,6 +14,7 @@ class LoginViewController: UIViewController
     @IBOutlet var passwordTxt:UITextField!
     @IBOutlet var signupButton:UIButton!
     @IBOutlet var forgotPasswordButton:UIButton!
+    @IBOutlet var messageLbl:UILabel!
     
     override func viewDidLoad()
     {
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController
         {
             signupButton.isHidden=true
             forgotPasswordButton.isHidden=true
+            messageLbl.isHidden=true
         }
     }
     
