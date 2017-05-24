@@ -966,7 +966,7 @@
                                     <constraint firstAttribute="height" constant="100" id="RE9-xT-vCj"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vehicle Registration Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7P-I6-BZo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vehicle Reg. No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7P-I6-BZo">
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -1125,7 +1125,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="T0j-VH-lOK"/>
-        <segue reference="U5U-70-zT7"/>
+        <segue reference="Mq9-Nh-yp8"/>
         <segue reference="6E4-aM-PVW"/>
         <segue reference="Y7K-67-AaX"/>
     </inferredMetricsTieBreakers>
