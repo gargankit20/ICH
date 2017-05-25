@@ -12,7 +12,6 @@ class AddPromotionViewController: UIViewController
 {
     @IBOutlet var productNameTxt:UITextField!
     @IBOutlet var discountTxt:UITextField!
-    @IBOutlet var button:UIButton!
     
     var productName:String!
     var discount:String!
@@ -22,11 +21,6 @@ class AddPromotionViewController: UIViewController
     {
         productNameTxt.text=productName
         discountTxt.text=discount
-        
-        if promotionID>0
-        {
-            button.setTitle("Update Promotion", for:.normal)
-        }
     }
     
     @IBAction func add()

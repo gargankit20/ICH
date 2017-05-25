@@ -4,6 +4,7 @@ import UIKit
 let SERVER_URL="http://ich-auapp.com/ICH/ws/"
 
 let session=URLSession.shared
+let appDelegate=UIApplication.shared.delegate as! AppDelegate
 
 func hasInternetConnect()->Bool
 {
@@ -18,6 +19,8 @@ func sendRequest(_ endPoint:String, _ completionHandler:@escaping(_ responseData
     
     if(hasInternetConnect())
     {
+        appDelegate.window?.isUserInteractionEnabled=false
+        
         let url=URL(string:"\(SERVER_URL)\(endPoint)")!
         
         let request=URLRequest(url:url)
@@ -28,6 +31,8 @@ func sendRequest(_ endPoint:String, _ completionHandler:@escaping(_ responseData
                 DispatchQueue.main.async
                     {
                         let jsonData:NSDictionary?
+                        
+                        appDelegate.window?.isUserInteractionEnabled=true
                         
                         if(data==nil)
                         {

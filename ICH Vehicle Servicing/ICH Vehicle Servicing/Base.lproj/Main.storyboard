@@ -33,51 +33,55 @@
                                     <constraint firstAttribute="height" constant="100" id="sWp-2U-4UC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WM-me-tpi">
-                                <color key="backgroundColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT1-2H-zZe">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WM-me-tpi">
+                                        <frame key="frameInset" width="280" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="SUPPLIER"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="supplier" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFv-tW-H3C"/>
+                                            <segue destination="Ats-P7-fJ4" kind="push" id="glf-el-YWW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpY-WX-wBf">
+                                        <frame key="frameInset" minY="70" width="280" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="CUSTOMER"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="customer" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yY-Hc-IZF"/>
+                                            <segue destination="Ats-P7-fJ4" kind="push" id="T0j-VH-lOK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ks4-K0-kjY"/>
+                                    <constraint firstAttribute="height" constant="120" id="rDF-7S-NPn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                <state key="normal" title="SUPPLIER"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="supplier" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFv-tW-H3C"/>
-                                    <segue destination="Ats-P7-fJ4" kind="push" id="glf-el-YWW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpY-WX-wBf">
-                                <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="E8E-WN-nad"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                <state key="normal" title="CUSTOMER"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="customer" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yY-Hc-IZF"/>
-                                    <segue destination="Ats-P7-fJ4" kind="push" id="T0j-VH-lOK"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tpY-WX-wBf" secondAttribute="bottom" constant="30" id="Ceh-hf-i2Y"/>
-                            <constraint firstAttribute="trailing" secondItem="tpY-WX-wBf" secondAttribute="trailing" constant="20" id="Kha-LQ-ZmS"/>
-                            <constraint firstItem="0WM-me-tpi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Qxy-JT-Mzp"/>
+                            <constraint firstItem="qT1-2H-zZe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BEz-hu-Du0"/>
+                            <constraint firstAttribute="trailing" secondItem="qT1-2H-zZe" secondAttribute="trailing" constant="20" id="CN6-Z9-WAv"/>
+                            <constraint firstItem="qT1-2H-zZe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OGa-eX-3be"/>
+                            <constraint firstItem="qT1-2H-zZe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="SLw-jL-VrC"/>
                             <constraint firstAttribute="trailing" secondItem="ku0-eJ-wWa" secondAttribute="trailing" constant="20" id="Z5P-xQ-Kza"/>
                             <constraint firstItem="ku0-eJ-wWa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZxK-br-jsy"/>
-                            <constraint firstAttribute="trailing" secondItem="0WM-me-tpi" secondAttribute="trailing" constant="20" id="izH-P9-2Qb"/>
-                            <constraint firstItem="tpY-WX-wBf" firstAttribute="top" secondItem="0WM-me-tpi" secondAttribute="bottom" constant="20" id="jLm-5n-hZ9"/>
-                            <constraint firstItem="tpY-WX-wBf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="nlM-9h-rDn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="etr-w4-Tnr"/>
@@ -91,7 +95,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rzQ-zg-nmy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="efg-45-KPu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="efg-45-KPu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -539,7 +543,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Zoj-X2-fWh" detailTextLabel="Fty-5g-wFT" style="IBUITableViewCellStyleValue1" id="v2y-AS-Ino">
-                                        <rect key="frame" x="0.0" y="1" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="1" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v2y-AS-Ino" id="gdE-3n-EKJ">
                                             <frame key="frameInset" width="320" height="43"/>
@@ -615,7 +619,7 @@
                                     <constraint firstAttribute="height" constant="100" id="rfS-ob-EXK"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vehicle Registration Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-y4-nRx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vehicle Reg. No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-y4-nRx">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="b3R-ab-5ko"/>
                                 </constraints>
@@ -815,10 +819,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VehicleCell" id="6mP-ca-gUa" customClass="VehicleCell" customModule="ICH_Vehicle_Servicing" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1" width="1000" height="72"/>
+                                        <rect key="frame" x="0.0" y="1" width="320" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6mP-ca-gUa" id="DT7-RJ-4x1">
-                                            <frame key="frameInset" width="1000" height="71"/>
+                                            <frame key="frameInset" width="320" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYv-YR-PXT">
@@ -910,7 +914,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="W1t-QB-os8" detailTextLabel="87y-2q-NCC" style="IBUITableViewCellStyleValue1" id="Pyp-G0-kGT">
-                                        <rect key="frame" x="0.0" y="1" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="1" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pyp-G0-kGT" id="sco-dR-8XW">
                                             <frame key="frameInset" width="320" height="43"/>
@@ -1008,7 +1012,7 @@
                                     <constraint firstAttribute="height" constant="50" id="IEo-fl-F7E"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                <state key="normal" title="Add Vehicle">
+                                <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1041,7 +1045,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Vehicle" id="bje-6t-FmS"/>
                     <connections>
-                        <outlet property="button" destination="g8u-we-OGE" id="7bm-Un-Gdd"/>
                         <outlet property="driverNameTxt" destination="E5f-TL-BgV" id="Nf4-mE-hhG"/>
                         <outlet property="purchasingLimitTxt" destination="8a6-49-rfT" id="FHD-l8-yZw"/>
                         <outlet property="vehicleRegistrationNoTxt" destination="A7P-I6-BZo" id="89H-pb-WnL"/>
@@ -1092,7 +1095,7 @@
                                     <constraint firstAttribute="height" constant="50" id="fgl-zj-fQE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                <state key="normal" title="Add Promotion">
+                                <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1122,7 +1125,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Promotion" id="pHy-ug-VID"/>
                     <connections>
-                        <outlet property="button" destination="a1e-7i-Q1U" id="t4h-Gg-DIR"/>
                         <outlet property="discountTxt" destination="GUc-pU-hqe" id="zqK-B9-7VA"/>
                         <outlet property="productNameTxt" destination="41j-Wa-MlV" id="W3r-vJ-B39"/>
                     </connections>
@@ -1136,9 +1138,10 @@
         <image name="logo" width="284" height="78"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T0j-VH-lOK"/>
-        <segue reference="Mq9-Nh-yp8"/>
-        <segue reference="6E4-aM-PVW"/>
         <segue reference="Y7K-67-AaX"/>
+        <segue reference="Mq9-Nh-yp8"/>
+        <segue reference="glf-el-YWW"/>
+        <segue reference="6E4-aM-PVW"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
 </document>

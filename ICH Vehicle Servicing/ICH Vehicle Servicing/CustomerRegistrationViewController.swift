@@ -74,7 +74,27 @@ class CustomerRegistrationViewController: UIViewController
     
     func textFieldShouldReturn(_ textField:UITextField)->Bool
     {
+        frameAnimationWithTextField(0)
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField:UITextField)->Bool
+    {
+        if textField==passwordTxt||textField==confirmPasswordTxt
+        {
+            frameAnimationWithTextField(-30)
+        }
+        
+        return true
+    }
+    
+    func frameAnimationWithTextField(_ originY:CGFloat)
+    {
+        UIView.beginAnimations(nil, context:nil)
+        var frame=view.frame
+        frame.origin.y=originY
+        view.frame=frame
+        UIView.commitAnimations()
     }
 }

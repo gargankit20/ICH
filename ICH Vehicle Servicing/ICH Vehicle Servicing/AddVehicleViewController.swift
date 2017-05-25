@@ -13,7 +13,6 @@ class AddVehicleViewController: UIViewController
     @IBOutlet var vehicleRegistrationNoTxt:UITextField!
     @IBOutlet var driverNameTxt:UITextField!
     @IBOutlet var purchasingLimitTxt:UITextField!
-    @IBOutlet var button:UIButton!
     
     var vehicleRegistrationNo:String!
     var driverName:String!
@@ -25,11 +24,6 @@ class AddVehicleViewController: UIViewController
         vehicleRegistrationNoTxt.text=vehicleRegistrationNo
         driverNameTxt.text=driverName
         purchasingLimitTxt.text=purchasingLimit
-        
-        if vehicleID>0
-        {
-            button.setTitle("Update Vehicle", for:.normal)
-        }
     }
     
     @IBAction func add()
