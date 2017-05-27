@@ -45,6 +45,6 @@ class OptionsViewController: UIViewController
         let appDomain=Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName:appDomain)
         
-        navigationController!.popViewController(animated:true)
+        navigationController!.popToRootViewController(animated:true)
     }
 }
