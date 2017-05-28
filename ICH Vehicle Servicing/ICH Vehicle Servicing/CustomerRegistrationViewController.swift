@@ -55,7 +55,7 @@ class CustomerRegistrationViewController: UIViewController
         }
         else if usernameTxt.text==""
         {
-            alertController=createAlert("Please enter your user name")
+            alertController=createAlert("Please enter your name")
             validate=false
         }
         else if !(confirmPasswordTxt.text==passwordTxt.text)

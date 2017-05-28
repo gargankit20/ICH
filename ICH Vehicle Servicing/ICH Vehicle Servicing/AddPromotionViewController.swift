@@ -21,6 +21,11 @@ class AddPromotionViewController: UIViewController
     {
         productNameTxt.text=productName
         discountTxt.text=discount
+        
+        if promotionID>0
+        {
+            self.title="Edit Promotion"
+        }
     }
     
     @IBAction func add()

@@ -24,6 +24,11 @@ class AddVehicleViewController: UIViewController
         vehicleRegistrationNoTxt.text=vehicleRegistrationNo
         driverNameTxt.text=driverName
         purchasingLimitTxt.text=purchasingLimit
+        
+        if vehicleID>0
+        {
+            self.title="Edit Vehicle"
+        }
     }
     
     @IBAction func add()
@@ -85,6 +90,7 @@ class AddVehicleViewController: UIViewController
 
     func textFieldShouldReturn(_ textField:UITextField)->Bool
     {
+        frameAnimationWithTextField(0)
         textField.resignFirstResponder()
         return true
     }
@@ -100,5 +106,24 @@ class AddVehicleViewController: UIViewController
         }
         
         return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField:UITextField)->Bool
+    {
+        if textField==driverNameTxt||textField==purchasingLimitTxt
+        {
+            frameAnimationWithTextField(-30)
+        }
+        
+        return true
+    }
+    
+    func frameAnimationWithTextField(_ originY:CGFloat)
+    {
+        UIView.beginAnimations(nil, context:nil)
+        var frame=view.frame
+        frame.origin.y=originY
+        view.frame=frame
+        UIView.commitAnimations()
     }
 }

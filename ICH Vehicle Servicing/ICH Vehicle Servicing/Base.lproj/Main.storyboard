@@ -95,7 +95,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rzQ-zg-nmy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="efg-45-KPu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="efg-45-KPu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -197,7 +197,7 @@
                                     <constraint firstAttribute="width" constant="100" id="yIf-YG-jwX"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="gargankit936@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vzn-Yk-Rqy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vzn-Yk-Rqy">
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
@@ -205,7 +205,7 @@
                                     <outlet property="delegate" destination="Ats-P7-fJ4" id="9dr-OE-TpX"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ankit8909" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7zM-Go-EGB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7zM-Go-EGB">
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
@@ -619,18 +619,18 @@
                                     <constraint firstAttribute="height" constant="100" id="rfS-ob-EXK"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vehicle Reg. No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-y4-nRx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rego" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-y4-nRx">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="b3R-ab-5ko"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
                                 <connections>
                                     <outlet property="delegate" destination="41a-EA-tg3" id="peI-zl-vq2"/>
                                 </connections>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um6-M0-pVa">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um6-M0-pVa">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="LBx-Ot-Vg1"/>
                                     <constraint firstAttribute="height" constant="30" id="gRq-4Q-aeo"/>
@@ -982,7 +982,7 @@
                                     <constraint firstAttribute="height" constant="100" id="RE9-xT-vCj"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vehicle Reg. No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7P-I6-BZo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rego" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7P-I6-BZo">
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -990,7 +990,7 @@
                                     <outlet property="delegate" destination="4D0-sc-eIM" id="ldH-UW-jTp"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Driver Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-TL-BgV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-TL-BgV">
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -998,7 +998,12 @@
                                     <outlet property="delegate" destination="4D0-sc-eIM" id="jzR-fD-18X"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Purchasing Limit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8a6-49-rfT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ankit Garg" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-bf-H5a">
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Limit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8a6-49-rfT">
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -1029,14 +1034,17 @@
                         <constraints>
                             <constraint firstItem="1vt-po-Mnx" firstAttribute="top" secondItem="snW-63-mIj" secondAttribute="bottom" id="9U8-3I-dpJ"/>
                             <constraint firstItem="E5f-TL-BgV" firstAttribute="leading" secondItem="LEP-QO-dy9" secondAttribute="leading" constant="20" id="Dy2-W2-NyX"/>
+                            <constraint firstItem="ji1-bf-H5a" firstAttribute="leading" secondItem="LEP-QO-dy9" secondAttribute="leading" constant="20" id="ENi-kA-e4G"/>
                             <constraint firstAttribute="trailing" secondItem="8a6-49-rfT" secondAttribute="trailing" constant="20" id="ISf-dz-evD"/>
                             <constraint firstItem="A7P-I6-BZo" firstAttribute="leading" secondItem="LEP-QO-dy9" secondAttribute="leading" constant="20" id="J5D-Pk-MGp"/>
+                            <constraint firstItem="8a6-49-rfT" firstAttribute="top" secondItem="ji1-bf-H5a" secondAttribute="bottom" constant="20" id="T8l-7n-DVk"/>
+                            <constraint firstAttribute="trailing" secondItem="ji1-bf-H5a" secondAttribute="trailing" constant="20" id="Zux-L2-x13"/>
                             <constraint firstItem="E5f-TL-BgV" firstAttribute="top" secondItem="A7P-I6-BZo" secondAttribute="bottom" constant="20" id="aWm-HJ-XWQ"/>
                             <constraint firstAttribute="trailing" secondItem="g8u-we-OGE" secondAttribute="trailing" constant="20" id="dzQ-XM-zcE"/>
                             <constraint firstAttribute="trailing" secondItem="A7P-I6-BZo" secondAttribute="trailing" constant="20" id="fxZ-mD-5Uh"/>
                             <constraint firstItem="g8u-we-OGE" firstAttribute="top" secondItem="8a6-49-rfT" secondAttribute="bottom" constant="20" id="jgx-gd-mYS"/>
                             <constraint firstAttribute="trailing" secondItem="1vt-po-Mnx" secondAttribute="trailing" constant="20" id="jmg-aJ-fki"/>
-                            <constraint firstItem="8a6-49-rfT" firstAttribute="top" secondItem="E5f-TL-BgV" secondAttribute="bottom" constant="20" id="oLM-eu-dDt"/>
+                            <constraint firstItem="ji1-bf-H5a" firstAttribute="top" secondItem="E5f-TL-BgV" secondAttribute="bottom" constant="20" id="mdA-If-j4z"/>
                             <constraint firstItem="g8u-we-OGE" firstAttribute="leading" secondItem="LEP-QO-dy9" secondAttribute="leading" constant="20" id="sQp-rT-WVq"/>
                             <constraint firstItem="A7P-I6-BZo" firstAttribute="top" secondItem="1vt-po-Mnx" secondAttribute="bottom" constant="36" id="tUx-B3-Qqb"/>
                             <constraint firstItem="8a6-49-rfT" firstAttribute="leading" secondItem="LEP-QO-dy9" secondAttribute="leading" constant="20" id="ucH-Rn-h1w"/>
@@ -1138,10 +1146,10 @@
         <image name="logo" width="284" height="78"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y7K-67-AaX"/>
-        <segue reference="Mq9-Nh-yp8"/>
-        <segue reference="glf-el-YWW"/>
         <segue reference="6E4-aM-PVW"/>
+        <segue reference="U5U-70-zT7"/>
+        <segue reference="glf-el-YWW"/>
+        <segue reference="Y7K-67-AaX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
 </document>
