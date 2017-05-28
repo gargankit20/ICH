@@ -56,7 +56,19 @@ class AddVehicleViewController: UIViewController
     
     func helperFunction(_ responseData:NSDictionary)
     {
-        navigationController!.popViewController(animated:true)
+        let code=responseData["code"] as! Int
+        
+        if code==200
+        {
+            navigationController!.popViewController(animated:true)
+        }
+        else
+        {
+            let message=responseData["message"] as! String
+            
+            let alertController=createAlert(message)
+            present(alertController, animated:true)
+        }
     }
     
     func validateTextFieldsBeforeSubmit()->Bool
