@@ -58,6 +58,11 @@ class CustomerRegistrationViewController: UIViewController
             alertController=createAlert("Please enter your name")
             validate=false
         }
+        else if confirmPasswordTxt.text==""
+        {
+            alertController=createAlert("Please re-enter your password")
+            validate=false
+        }
         else if !(confirmPasswordTxt.text==passwordTxt.text)
         {
             alertController=createAlert("Please make sure your password and repeat password are the same")
