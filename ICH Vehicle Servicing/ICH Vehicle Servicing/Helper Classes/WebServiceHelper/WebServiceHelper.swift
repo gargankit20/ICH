@@ -69,9 +69,9 @@ func customerRegistration(_ email:String, _ password:String, _ username:String, 
 
 func customerLogin(_ email:String, _ password:String, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
-    let endPoint="customerLogin.php?email=\(email)&password=\(password)"
+    let endPoint="email=\(email)&password=\(password)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
-    sendRequest(endPoint, {responseData in
+    sendRequest("customerLogin.php?\(endPoint)", {responseData in
         completionHandler(responseData)
     })
 }
