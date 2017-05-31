@@ -30,6 +30,9 @@ class AddPromotionViewController: UIViewController
     
     @IBAction func add()
     {
+        productNameTxt.resignFirstResponder()
+        discountTxt.resignFirstResponder()
+        
         if(validateTextFieldsBeforeSubmit())
         {
             if promotionID==0

@@ -33,6 +33,10 @@ class AddVehicleViewController: UIViewController
     
     @IBAction func add()
     {
+        vehicleRegistrationNoTxt.resignFirstResponder()
+        driverNameTxt.resignFirstResponder()
+        purchasingLimitTxt.resignFirstResponder()
+        
         if validateTextFieldsBeforeSubmit()
         {
             let customerID=UserDefaults.standard.integer(forKey:"loggedInUserID")
