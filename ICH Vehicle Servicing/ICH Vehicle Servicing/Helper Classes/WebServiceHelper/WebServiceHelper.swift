@@ -184,9 +184,9 @@ func searchVehicle(_ registrationNo:String, _ completionHandler:@escaping(_ resp
     })
 }
 
-func approveVehicleRegistration(_ vehicleID:Int, _ authorizationNo:String, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
+func approveVehicleRegistration(_ customerID:Int, _ authorizationNo:String, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
-    let endPoint="approveVehicleRegistration.php?vehicle_id=\(vehicleID)&authorization_no=\(authorizationNo)"
+    let endPoint="approveVehicleRegistration.php?customer_id=\(customerID)&authorization_no=\(authorizationNo)"
     
     sendRequest(endPoint, {responseData in
         completionHandler(responseData)

@@ -22,7 +22,7 @@ class SearchAuthorizationViewController: UIViewController
     @IBOutlet var noButton:UIButton!
     @IBOutlet var saveButton:UIButton!
     
-    var vehicleID:Int!
+    var customerID:Int!
     var authorizationNo:String!
     
     @IBAction func yes()
@@ -42,7 +42,7 @@ class SearchAuthorizationViewController: UIViewController
     
     @IBAction func save()
     {
-        approveVehicleRegistration(vehicleID, authorizationNo, {responseData in
+        approveVehicleRegistration(customerID, authorizationNo, {responseData in
             
             let message=responseData["message"] as! String
             
@@ -75,7 +75,7 @@ class SearchAuthorizationViewController: UIViewController
         
         if code==200
         {
-            vehicleID=responseData["vehicle_id"] as! Int
+            customerID=responseData["customer_id"] as! Int
             
             driverNameLbl.text=responseData["driver_name"] as? String
             limitValueLbl.text=responseData["purchasing_limit"] as? String
