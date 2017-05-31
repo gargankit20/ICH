@@ -15,9 +15,12 @@ class LoginViewController: UIViewController
     @IBOutlet var signupButton:UIButton!
     @IBOutlet var forgotPasswordButton:UIButton!
     @IBOutlet var messageLbl:UILabel!
+    @IBOutlet var loginButton:UIButton!
     
     override func viewDidLoad()
     {
+        loginButton.isExclusiveTouch=true
+        
         if UserDefaults.standard.integer(forKey:"user")==0
         {
             signupButton.isHidden=true
