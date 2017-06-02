@@ -45,11 +45,15 @@ class SearchAuthorizationViewController: UIViewController
         approveVehicleRegistration(customerID, authorizationNo, {responseData in
             
             let message=responseData["message"] as! String
+            let code=responseData["code"] as! Int
+            
+            if code==200
+            {
+                self.no()
+            }
             
             let alertController=createAlert(message)
             self.present(alertController, animated:true)
-            
-            self.no()
         })
     }
     
