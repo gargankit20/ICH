@@ -8,6 +8,12 @@
 
 import UIKit
 
+class PromotionCell: UITableViewCell
+{
+    @IBOutlet var productNameLbl:UILabel!
+    @IBOutlet var detailLbl:UILabel!
+}
+
 class PromotionsViewController: UIViewController
 {
     @IBOutlet var promotionsTbl:UITableView!
@@ -66,10 +72,10 @@ class PromotionsViewController: UIViewController
     
     func tableView(_ tableView:UITableView, cellForRowAtIndexPath indexPath:IndexPath)->UITableViewCell
     {
-        let cell=tableView.dequeueReusableCell(withIdentifier:"Cell")!
+        let cell=tableView.dequeueReusableCell(withIdentifier:"PromotionCell") as! PromotionCell
         
-        cell.textLabel?.text=productNamesArray[indexPath.row] as? String
-        cell.detailTextLabel?.text=discountsArray[indexPath.row] as? String
+        cell.productNameLbl.text=productNamesArray[indexPath.row] as? String
+        cell.detailLbl.text=discountsArray[indexPath.row] as? String
         
         return cell
     }
