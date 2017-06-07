@@ -69,7 +69,7 @@ class PromotionsViewController: UIViewController
         let cell=tableView.dequeueReusableCell(withIdentifier:"Cell")!
         
         cell.textLabel?.text=productNamesArray[indexPath.row] as? String
-        cell.detailTextLabel?.text="\(discountsArray[indexPath.row])%"
+        cell.detailTextLabel?.text=discountsArray[indexPath.row] as? String
         
         return cell
     }

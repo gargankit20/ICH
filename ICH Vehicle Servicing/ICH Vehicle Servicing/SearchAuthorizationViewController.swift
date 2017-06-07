@@ -82,7 +82,7 @@ class SearchAuthorizationViewController: UIViewController
             customerID=responseData["customer_id"] as! Int
             
             driverNameLbl.text=responseData["driver_name"] as? String
-            limitValueLbl.text=responseData["purchasing_limit"] as? String
+            limitValueLbl.text="$\(responseData["purchasing_limit"]!)"
             
             hideVehicleDetail(false)
         }
@@ -122,7 +122,7 @@ class SearchAuthorizationViewController: UIViewController
         let formatter=DateFormatter()
         formatter.dateFormat="ddMMyyyy"
         
-        authorizationNo="KTAS\(formatter.string(from:Date()))\(randomLetter())\(vehicleRegistrationNoTxt.text!)"
+        authorizationNo="KTAS\(formatter.string(from:Date()))\(randomLetter())\(vehicleRegistrationNoTxt.text!.uppercased())"
     }
     
     func randomLetter()->String
