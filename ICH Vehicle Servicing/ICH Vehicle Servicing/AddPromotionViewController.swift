@@ -16,6 +16,7 @@ class AddPromotionViewController: UIViewController
     var productName:String!
     var discount:String!
     var promotionID=0
+    var maxCharacters:Int!
     
     override func viewDidLoad()
     {
@@ -85,5 +86,29 @@ class AddPromotionViewController: UIViewController
     {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField:UITextField)
+    {
+        if textField==productNameTxt
+        {
+            maxCharacters=20
+        }
+        else
+        {
+            maxCharacters=55
+        }
+    }
+    
+    func textField(_ textField:UITextField, shouldChangeCharactersInRange range:NSRange, replacementString string:String)->Bool
+    {
+        let currentCharacterCount=textField.text?.characters.count ?? 0
+        if (range.length+range.location>currentCharacterCount)
+        {
+            return false
+        }
+        
+        let newLength=currentCharacterCount+string.characters.count-range.length
+        return newLength<=maxCharacters
     }
 }
