@@ -818,8 +818,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search Authorization" id="mls-kV-D9k"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="authorizationNumber" destination="0Yi-ND-h7z" id="fu8-xb-Nxr"/>
                         <outlet property="authorizationNumberValue" destination="Vsb-iq-mHr" id="nh9-Nr-bcE"/>
