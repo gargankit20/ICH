@@ -77,28 +77,13 @@ class AddVehicleViewController: UIViewController
     
     func validateTextFieldsBeforeSubmit()->Bool
     {
-        var alertController:UIAlertController?
         var validate=true
         
         if vehicleRegistrationNoTxt.text==""
         {
-            alertController=createAlert("Please enter vehicle registration number")
+            let alertController=createAlert("Please enter vehicle registration number")
+            present(alertController, animated:true)
             validate=false
-        }
-        else if driverNameTxt.text==""
-        {
-            alertController=createAlert("Please enter driver name")
-            validate=false
-        }
-        else if purchasingLimitTxt.text==""
-        {
-            alertController=createAlert("Please enter purchasing limit")
-            validate=false
-        }
-        
-        if let alert=alertController
-        {
-            present(alert, animated:true)
         }
         
         return validate

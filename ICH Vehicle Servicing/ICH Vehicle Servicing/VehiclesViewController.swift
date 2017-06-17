@@ -78,9 +78,9 @@ class VehiclesViewController: UIViewController
     {
         let cell=tableView.dequeueReusableCell(withIdentifier:"VehicleCell") as! VehicleCell
         
-        cell.driverNameLbl.text=driverNamesArray[indexPath.row] as? String
+        cell.driverNameLbl.text=(driverNamesArray[indexPath.row] as? String)=="" ? "NA" : driverNamesArray[indexPath.row] as? String
         cell.vehicleRegistrationNoLbl.text=(vehicleRegistrationNosArray[indexPath.row] as! String).uppercased()
-        cell.purchasingLimitLbl.text="$\(purchasingLimitsArray[indexPath.row])"
+        cell.purchasingLimitLbl.text=(purchasingLimitsArray[indexPath.row] as? String)=="0" ? "NA" : "$\(purchasingLimitsArray[indexPath.row])"
         
         return cell
     }

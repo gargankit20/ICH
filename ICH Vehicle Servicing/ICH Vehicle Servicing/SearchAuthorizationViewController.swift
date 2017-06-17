@@ -122,7 +122,7 @@ class SearchAuthorizationViewController: UIViewController
         let formatter=DateFormatter()
         formatter.dateFormat="ddMMyyyy"
         
-        authorizationNo="KTAS\(formatter.string(from:Date()))\(randomLetter())\(vehicleRegistrationNoTxt.text!.uppercased())"
+        authorizationNo="BGS\(formatter.string(from:Date()))\(randomLetter())\(vehicleRegistrationNoTxt.text!.uppercased())"
     }
     
     func randomLetter()->String

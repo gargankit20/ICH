@@ -92,11 +92,11 @@ class AddPromotionViewController: UIViewController
     {
         if textField==productNameTxt
         {
-            maxCharacters=20
+            maxCharacters=30
         }
         else
         {
-            maxCharacters=55
+            maxCharacters=80
         }
     }
     
