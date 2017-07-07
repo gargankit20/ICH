@@ -18,6 +18,7 @@ class AddVehicleViewController: UIViewController
     var driverName:String!
     var purchasingLimit:String!
     var vehicleID=0
+    var supplierID=1
     
     override func viewDidLoad()
     {
@@ -43,14 +44,14 @@ class AddVehicleViewController: UIViewController
             
             if vehicleID==0
             {
-                addVehicle(vehicleRegistrationNoTxt.text!, driverNameTxt.text!, purchasingLimitTxt.text!, customerID, {responseData in
+                addVehicle(vehicleRegistrationNoTxt.text!, driverNameTxt.text!, purchasingLimitTxt.text!, customerID, supplierID, {responseData in
                     
                     self.helperFunction(responseData)
                 })
             }
             else
             {
-                editVehicle(vehicleRegistrationNoTxt.text!, driverNameTxt.text!, purchasingLimitTxt.text!, vehicleID, {responseData in
+                editVehicle(vehicleRegistrationNoTxt.text!, driverNameTxt.text!, purchasingLimitTxt.text!, vehicleID, supplierID, {responseData in
                     
                     self.helperFunction(responseData)
                 })

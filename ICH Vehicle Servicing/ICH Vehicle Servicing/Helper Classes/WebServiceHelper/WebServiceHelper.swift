@@ -121,9 +121,9 @@ func editPromotion(_ productName:String, _ discount:String, _ promotionID:Int, _
     })
 }
 
-func addVehicle(_ registrationNo:String, _ driverName:String, _ purchasingLimit:String, _ customerID:Int, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
+func addVehicle(_ registrationNo:String, _ driverName:String, _ purchasingLimit:String, _ customerID:Int, _ supplierID:Int, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
-    let endPoint="registration_no=\(registrationNo)&driver_name=\(driverName)&purchasing_limit=\(purchasingLimit)&customer_id=\(customerID)&supplier_id=1".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
+    let endPoint="registration_no=\(registrationNo)&driver_name=\(driverName)&purchasing_limit=\(purchasingLimit)&customer_id=\(customerID)&supplier_id=\(supplierID)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
     sendRequest("addVehicle.php?\(endPoint)", {responseData in
         completionHandler(responseData)
@@ -148,9 +148,9 @@ func deleteVehicle(_ vehicleID:Int, _ completionHandler:@escaping(_ responseData
     })
 }
 
-func editVehicle(_ registrationNo:String, _ driverName:String, _ purchasingLimit:String, _ vehicleID:Int, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
+func editVehicle(_ registrationNo:String, _ driverName:String, _ purchasingLimit:String, _ vehicleID:Int, _ supplierID:Int, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
-    let endPoint="registration_no=\(registrationNo)&driver_name=\(driverName)&purchasing_limit=\(purchasingLimit)&vehicle_id=\(vehicleID)&supplier_id=1".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
+    let endPoint="registration_no=\(registrationNo)&driver_name=\(driverName)&purchasing_limit=\(purchasingLimit)&vehicle_id=\(vehicleID)&supplier_id=\(supplierID)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
     sendRequest("editVehicle.php?\(endPoint)", {responseData in
         completionHandler(responseData)
