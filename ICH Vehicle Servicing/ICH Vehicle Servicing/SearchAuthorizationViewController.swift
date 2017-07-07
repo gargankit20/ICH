@@ -42,7 +42,9 @@ class SearchAuthorizationViewController: UIViewController
     
     @IBAction func save()
     {
-        approveVehicleRegistration(customerID, authorizationNo, {responseData in
+        let supplierID=UserDefaults.standard.integer(forKey:"loggedInUserID")
+        
+        approveVehicleRegistration(supplierID, customerID, authorizationNo, {responseData in
             
             let message=responseData["message"] as! String
             let code=responseData["code"] as! Int
