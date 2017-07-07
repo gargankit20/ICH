@@ -19,7 +19,7 @@ class OptionsViewController: UIViewController
         if UserDefaults.standard.integer(forKey:"user")==0
         {
             self.title="Supplier"
-            firstButton.setTitle("SEARCH AUTHORIZATION", for:.normal)
+            firstButton.setTitle("SEARCH REGISTRATION", for:.normal)
         }
         else
         {

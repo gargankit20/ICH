@@ -22,6 +22,7 @@ class PromotionsViewController: UIViewController
     var discountsArray=NSMutableArray()
     var promotionIDsArray=NSMutableArray()
     var canSwipe=true
+    var supplierID=0
     
     override func viewDidLoad()
     {
@@ -31,6 +32,10 @@ class PromotionsViewController: UIViewController
             
             canSwipe=false
         }
+        else
+        {
+            supplierID=UserDefaults.standard.integer(forKey:"loggedInUserID")
+        }
     }
     
     override func viewWillAppear(_ animated:Bool)
@@ -39,7 +44,7 @@ class PromotionsViewController: UIViewController
         discountsArray.removeAllObjects()
         promotionIDsArray.removeAllObjects()
         
-        getPromotions({responseData in
+        getPromotions(supplierID, {responseData in
             
             self.parseData(responseData)
         })

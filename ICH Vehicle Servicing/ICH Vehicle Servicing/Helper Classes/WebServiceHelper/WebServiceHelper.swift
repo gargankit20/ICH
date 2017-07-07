@@ -85,9 +85,9 @@ func supplierLogin(_ email:String, _ password:String, _ completionHandler:@escap
     })
 }
 
-func getPromotions(_ completionHandler:@escaping(_ responseData:NSDictionary)->())
+func getPromotions(_ supplierID:Int, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
-    let endPoint="getPromotions.php?supplier_id=1"
+    let endPoint="getPromotions.php?supplier_id=\(supplierID)"
     
     sendRequest(endPoint, {responseData in
         completionHandler(responseData)

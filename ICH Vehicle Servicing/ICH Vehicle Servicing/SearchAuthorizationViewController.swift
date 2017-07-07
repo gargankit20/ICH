@@ -81,7 +81,7 @@ class SearchAuthorizationViewController: UIViewController
         {
             customerID=responseData["customer_id"] as! Int
             
-            driverNameLbl.text=responseData["driver_name"] as? String
+            driverNameLbl.text=(responseData["driver_name"] as? String)=="" ? "NA" : responseData["driver_name"] as? String
             limitValueLbl.text="$\(responseData["purchasing_limit"]!)"
             
             hideVehicleDetail(false)
@@ -120,7 +120,7 @@ class SearchAuthorizationViewController: UIViewController
     func generateAuthorizationNo()
     {
         let formatter=DateFormatter()
-        formatter.dateFormat="ddMMyyyy"
+        formatter.dateFormat="ddMMyy"
         
         authorizationNo="BGS\(formatter.string(from:Date()))\(randomLetter())\(vehicleRegistrationNoTxt.text!.uppercased())"
     }
