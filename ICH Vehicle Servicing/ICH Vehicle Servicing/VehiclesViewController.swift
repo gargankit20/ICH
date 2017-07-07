@@ -23,6 +23,7 @@ class VehiclesViewController: UIViewController
     var driverNamesArray=NSMutableArray()
     var purchasingLimitsArray=NSMutableArray()
     var vehicleIDsArray=NSMutableArray()
+    var supplierIDsArray=NSMutableArray()
     
     override func viewDidLoad()
     {
@@ -40,6 +41,7 @@ class VehiclesViewController: UIViewController
         driverNamesArray.removeAllObjects()
         purchasingLimitsArray.removeAllObjects()
         vehicleIDsArray.removeAllObjects()
+        supplierIDsArray.removeAllObjects()
         
         getVehicles(customerID, {responseData in
             
@@ -59,11 +61,13 @@ class VehiclesViewController: UIViewController
             let driverName=vehicle["driver_name"] as! String
             let purchasingLimit=vehicle["purchasing_limit"] as! String
             let vehicleID=vehicle["vehicle_id"] as! String
+            let supplierID=vehicle["supplier_id"] as! String
             
             vehicleRegistrationNosArray.add(vehicleRegistrationNo)
             driverNamesArray.add(driverName)
             purchasingLimitsArray.add(purchasingLimit)
             vehicleIDsArray.add(vehicleID)
+            supplierIDsArray.add(supplierID)
         }
         
         vehiclesTbl.reloadData()
@@ -121,6 +125,7 @@ class VehiclesViewController: UIViewController
             AVVC.driverName=driverNamesArray[sender as! Int] as! String
             AVVC.purchasingLimit=purchasingLimitsArray[sender as! Int] as! String
             AVVC.vehicleID=Int(vehicleIDsArray[sender as! Int] as! String)!
+            AVVC.supplierID=Int(supplierIDsArray[sender as! Int] as! String)!
         }
     }
 }

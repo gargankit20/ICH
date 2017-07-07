@@ -19,7 +19,7 @@ class AddVehicleViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
     var driverName:String!
     var purchasingLimit:String!
     var vehicleID=0
-    var supplierID:Int!
+    var supplierID=0
     let brandNamePicker=UIPickerView()
     let supplierIDsArray=NSMutableArray()
     let brandNamesArray=NSMutableArray()
@@ -65,6 +65,12 @@ class AddVehicleViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
                 
                 self.brandNamesArray.add(brandName)
                 self.supplierIDsArray.add(supplierID)
+            }
+            
+            if self.supplierID>0
+            {
+                let index=self.supplierIDsArray.index(of:String(self.supplierID))
+                self.brandNameTxt.text=self.brandNamesArray[index] as? String
             }
         })
     }
@@ -208,6 +214,6 @@ class AddVehicleViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
     func pickerView(_ pickerView:UIPickerView, didSelectRow row:Int, inComponent component:Int)
     {
         brandNameTxt.text=brandNamesArray[row] as? String
-        supplierID=Int(supplierIDsArray[row] as! String)
+        supplierID=Int(supplierIDsArray[row] as! String)!
     }
 }
