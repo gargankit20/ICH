@@ -94,9 +94,9 @@ func getPromotions(_ supplierID:Int, _ completionHandler:@escaping(_ responseDat
     })
 }
 
-func addPromotion(_ productName:String, _ discount:String, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
+func addPromotion(_ supplierID:Int, _ productName:String, _ discount:String, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
-    let endPoint="product_name=\(productName)&discount=\(discount)&supplier_id=1".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
+    let endPoint="product_name=\(productName)&discount=\(discount)&supplier_id=\(supplierID)".addingPercentEncoding(withAllowedCharacters:.urlHostAllowed)!
     
     sendRequest("addPromotion.php?\(endPoint)", {responseData in
         completionHandler(responseData)

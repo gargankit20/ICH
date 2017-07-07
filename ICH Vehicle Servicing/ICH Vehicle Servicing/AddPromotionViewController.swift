@@ -38,7 +38,9 @@ class AddPromotionViewController: UIViewController
         {
             if promotionID==0
             {
-                addPromotion(productNameTxt.text!, discountTxt.text!, {responseData in
+                let supplierID=UserDefaults.standard.integer(forKey:"loggedInUserID")
+                
+                addPromotion(supplierID, productNameTxt.text!, discountTxt.text!, {responseData in
                     
                     self.helperFunction(responseData)
                 })
