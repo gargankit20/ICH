@@ -56,6 +56,12 @@ class LoginViewController: UIViewController
         
         if code==200
         {
+            if UserDefaults.standard.integer(forKey:"user")==0
+            {
+                let brandCode=responseData["brand_code"] as! String
+                UserDefaults.standard.set(brandCode, forKey:"brandCode")
+            }
+            
             let loggedInUserID=responseData["user_id"] as! Int
             UserDefaults.standard.set(loggedInUserID, forKey:"loggedInUserID")
             performSegue(withIdentifier:"GoToFirst", sender:nil)

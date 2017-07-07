@@ -124,7 +124,9 @@ class SearchAuthorizationViewController: UIViewController
         let formatter=DateFormatter()
         formatter.dateFormat="ddMMyy"
         
-        authorizationNo="BGS\(formatter.string(from:Date()))\(randomLetter())\(vehicleRegistrationNoTxt.text!.uppercased())"
+        let brandCode=UserDefaults.standard.string(forKey:"brandCode")!
+        
+        authorizationNo="\(brandCode)\(formatter.string(from:Date()))\(randomLetter())\(vehicleRegistrationNoTxt.text!.uppercased())"
     }
     
     func randomLetter()->String
