@@ -166,6 +166,13 @@ func getApprovalHistory(_ userID:Int, _ identifier:Int, _ completionHandler:@esc
     })
 }
 
+func getSuppliers(_ completionHandler:@escaping(_ responseData:NSDictionary)->())
+{
+    sendRequest("getSuppliers.php", {responseData in
+        completionHandler(responseData)
+    })
+}
+
 func getPassword(_ email:String, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
     let endPoint="getPassword.php?email=\(email)"
