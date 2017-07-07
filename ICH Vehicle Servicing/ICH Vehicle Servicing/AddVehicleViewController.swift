@@ -8,20 +8,38 @@
 
 import UIKit
 
-class AddVehicleViewController: UIViewController
+class AddVehicleViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
 {
     @IBOutlet var vehicleRegistrationNoTxt:UITextField!
     @IBOutlet var driverNameTxt:UITextField!
+    @IBOutlet var brandNameTxt:UITextField!
     @IBOutlet var purchasingLimitTxt:UITextField!
     
     var vehicleRegistrationNo:String!
     var driverName:String!
     var purchasingLimit:String!
     var vehicleID=0
-    var supplierID=1
+    var supplierID:Int!
+    let brandNamePicker=UIPickerView()
+    let supplierIDsArray=NSMutableArray()
+    let brandNamesArray=NSMutableArray()
     
     override func viewDidLoad()
     {
+        getAllSuppliers()
+        
+        brandNamePicker.delegate=self
+        brandNamePicker.dataSource=self
+        
+        let barButtonItem1=UIBarButtonItem(barButtonSystemItem:.done, target:self, action:#selector(closePicker))
+        let barButtonItem2=UIBarButtonItem(barButtonSystemItem:.flexibleSpace, target:nil, action:nil)
+        
+        let toolBar=UIToolbar(frame:CGRect(x:0, y:0, width:view.frame.width, height:44))
+        toolBar.items=[barButtonItem2, barButtonItem1]
+        
+        brandNameTxt.inputView=brandNamePicker
+        brandNameTxt.inputAccessoryView=toolBar
+
         vehicleRegistrationNoTxt.text=vehicleRegistrationNo
         driverNameTxt.text=driverName
         purchasingLimitTxt.text=purchasingLimit
@@ -30,6 +48,31 @@ class AddVehicleViewController: UIViewController
         {
             self.title="Edit Vehicle"
         }
+    }
+    
+    func getAllSuppliers()
+    {
+        getSuppliers({responseData in
+            
+            let suppliers=responseData["suppliers"] as! NSArray
+            
+            for i in 0 ..< suppliers.count
+            {
+                let supplier=suppliers[i] as! NSDictionary
+                
+                let brandName=supplier["brand_name"] as! String
+                let supplierID=supplier["supplier_id"] as! String
+                
+                self.brandNamesArray.add(brandName)
+                self.supplierIDsArray.add(supplierID)
+            }
+        })
+    }
+    
+    func closePicker()
+    {
+        frameAnimationWithTextField(0)
+        brandNameTxt.resignFirstResponder()
     }
     
     @IBAction func add()
@@ -78,13 +121,23 @@ class AddVehicleViewController: UIViewController
     
     func validateTextFieldsBeforeSubmit()->Bool
     {
+        var alertController:UIAlertController?
         var validate=true
         
         if vehicleRegistrationNoTxt.text==""
         {
-            let alertController=createAlert("Please enter vehicle registration number")
-            present(alertController, animated:true)
+            alertController=createAlert("Please enter vehicle registration number")
             validate=false
+        }
+        if brandNameTxt.text==""
+        {
+            alertController=createAlert("Please choose supplier")
+            validate=false
+        }
+        
+        if let alert=alertController
+        {
+            present(alert, animated:true)
         }
         
         return validate
@@ -106,6 +159,10 @@ class AddVehicleViewController: UIViewController
                 return false
             }
         }
+        if textField==brandNameTxt
+        {
+            return false
+        }
         
         return true
     }
@@ -115,6 +172,10 @@ class AddVehicleViewController: UIViewController
         if textField==driverNameTxt||textField==purchasingLimitTxt
         {
             frameAnimationWithTextField(-30)
+        }
+        else if textField==brandNameTxt
+        {
+            frameAnimationWithTextField(-75)
         }
         
         return true
@@ -127,5 +188,26 @@ class AddVehicleViewController: UIViewController
         frame.origin.y=originY
         view.frame=frame
         UIView.commitAnimations()
+    }
+    
+    func numberOfComponents(in pickerView:UIPickerView)->Int
+    {
+        return 1
+    }
+    
+    func pickerView(_ pickerView:UIPickerView, numberOfRowsInComponent component:Int)->Int
+    {
+        return brandNamesArray.count
+    }
+    
+    func pickerView(_ pickerView:UIPickerView, titleForRow row:Int, forComponent component:Int)->String?
+    {
+        return brandNamesArray[row] as? String
+    }
+    
+    func pickerView(_ pickerView:UIPickerView, didSelectRow row:Int, inComponent component:Int)
+    {
+        brandNameTxt.text=brandNamesArray[row] as? String
+        supplierID=Int(supplierIDsArray[row] as! String)
     }
 }
