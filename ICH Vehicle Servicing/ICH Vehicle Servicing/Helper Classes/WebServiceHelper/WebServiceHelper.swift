@@ -182,9 +182,9 @@ func getPassword(_ email:String, _ completionHandler:@escaping(_ responseData:NS
     })
 }
 
-func searchVehicle(_ registrationNo:String, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
+func searchVehicle(_ supplierID:Int, _ registrationNo:String, _ completionHandler:@escaping(_ responseData:NSDictionary)->())
 {
-    let endPoint="searchVehicle.php?registration_no=\(registrationNo)"
+    let endPoint="searchVehicle.php?registration_no=\(registrationNo)&supplier_id=\(supplierID)"
     
     sendRequest(endPoint, {responseData in
         completionHandler(responseData)

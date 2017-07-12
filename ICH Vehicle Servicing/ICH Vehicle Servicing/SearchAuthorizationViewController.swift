@@ -61,7 +61,9 @@ class SearchAuthorizationViewController: UIViewController
     
     func textFieldShouldReturn(_ textField:UITextField)->Bool
     {
-        searchVehicle(vehicleRegistrationNoTxt.text!, {responseData in
+        let supplierID=UserDefaults.standard.integer(forKey:"loggedInUserID")
+        
+        searchVehicle(supplierID, vehicleRegistrationNoTxt.text!, {responseData in
             
             self.parseData(responseData)
         })
