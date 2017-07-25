@@ -27,6 +27,8 @@ class VehiclesViewController: UIViewController
     
     override func viewDidLoad()
     {
+        navigationController?.navigationBar.isExclusiveTouch=true
+        
         if UserDefaults.standard.integer(forKey:"user")==0
         {
             navigationItem.rightBarButtonItem=nil
