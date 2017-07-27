@@ -74,7 +74,8 @@ class SearchAuthorizationViewController: UIViewController
     
     func textField(_ textField:UITextField, shouldChangeCharactersInRange range:NSRange, replacementString string:String)->Bool
     {
-        return string==" " ? false : true
+        let set=CharacterSet.alphanumerics.inverted
+        return string.rangeOfCharacter(from:set)==nil
     }
 
     func parseData(_ responseData:NSDictionary)
