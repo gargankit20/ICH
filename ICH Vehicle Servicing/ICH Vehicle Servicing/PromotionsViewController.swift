@@ -26,6 +26,8 @@ class PromotionsViewController: UIViewController
     
     override func viewDidLoad()
     {
+        navigationController?.navigationBar.isExclusiveTouch=true
+        
         if UserDefaults.standard.integer(forKey:"user")==1
         {
             navigationItem.rightBarButtonItem=nil
