@@ -14,3 +14,13 @@ func createAlert(_ message:String)->UIAlertController
     alertController.addAction(UIAlertAction(title:"OK", style:.cancel, handler:nil))
     return alertController
 }
+
+func showActivityIndicator(_ view:UIView)->UIActivityIndicatorView
+{
+    let activityView=UIActivityIndicatorView(activityIndicatorStyle:.gray)
+    activityView.center=view.center
+    activityView.startAnimating()
+    view.addSubview(activityView)
+    
+    return activityView
+}

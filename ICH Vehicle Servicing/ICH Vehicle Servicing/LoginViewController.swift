@@ -17,6 +17,8 @@ class LoginViewController: UIViewController
     @IBOutlet var messageLbl:UILabel!
     @IBOutlet var loginButton:UIButton!
     
+    var activityView:UIActivityIndicatorView!
+    
     override func viewDidLoad()
     {
         loginButton.isExclusiveTouch=true
@@ -33,6 +35,8 @@ class LoginViewController: UIViewController
     {
         if validateTextFieldsBeforeSubmit()
         {
+            activityView=showActivityIndicator(view)
+            
             if UserDefaults.standard.integer(forKey:"user")==0
             {
                 supplierLogin(emailTxt.text!, passwordTxt.text!, {responseData in
@@ -52,6 +56,8 @@ class LoginViewController: UIViewController
     
     func helperFunction(_ responseData:NSDictionary)
     {
+        activityView.removeFromSuperview()
+        
         let code=responseData["code"] as! Int
         
         if code==200

@@ -50,6 +50,11 @@ class AddVehicleViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
         }
     }
     
+    override func viewWillDisappear(_ animated:Bool)
+    {
+        view.endEditing(true)
+    }
+    
     func getAllSuppliers()
     {
         getSuppliers({responseData in

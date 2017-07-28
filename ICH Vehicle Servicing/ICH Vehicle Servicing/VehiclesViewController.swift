@@ -24,6 +24,7 @@ class VehiclesViewController: UIViewController
     var purchasingLimitsArray=NSMutableArray()
     var vehicleIDsArray=NSMutableArray()
     var supplierIDsArray=NSMutableArray()
+    var activityView:UIActivityIndicatorView!
     
     override func viewDidLoad()
     {
@@ -45,6 +46,8 @@ class VehiclesViewController: UIViewController
         vehicleIDsArray.removeAllObjects()
         supplierIDsArray.removeAllObjects()
         
+        activityView=showActivityIndicator(view)
+        
         getVehicles(customerID, {responseData in
             
             self.parseData(responseData)
@@ -53,6 +56,8 @@ class VehiclesViewController: UIViewController
     
     func parseData(_ responseData:NSDictionary)
     {
+        activityView.removeFromSuperview()
+        
         let vehicles=responseData["vehicles"] as! NSArray
         
         for i in 0 ..< vehicles.count

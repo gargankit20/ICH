@@ -31,6 +31,11 @@ class AddPromotionViewController: UIViewController
         }
     }
     
+    override func viewWillDisappear(_ animated:Bool)
+    {
+        view.endEditing(true)
+    }
+
     @IBAction func add()
     {
         productNameTxt.resignFirstResponder()
