@@ -83,9 +83,11 @@ class AddVehicleViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
     
     @IBAction func add()
     {
+        frameAnimationWithTextField(0)
         vehicleRegistrationNoTxt.resignFirstResponder()
         driverNameTxt.resignFirstResponder()
         purchasingLimitTxt.resignFirstResponder()
+        brandNameTxt.resignFirstResponder()
         
         if validateTextFieldsBeforeSubmit()
         {
