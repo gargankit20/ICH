@@ -20,6 +20,8 @@ class AddPromotionViewController: UIViewController
     
     override func viewDidLoad()
     {
+        navigationController?.navigationBar.isExclusiveTouch=true
+        
         productNameTxt.text=productName
         discountTxt.text=discount
         
