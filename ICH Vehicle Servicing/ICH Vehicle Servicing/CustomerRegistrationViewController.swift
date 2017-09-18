@@ -31,7 +31,7 @@ class CustomerRegistrationViewController: UIViewController
                 }
                 else
                 {
-                    let alertController=createAlert("Email is already exist")
+                    let alertController=createAlert("Email or username is already exist")
                     self.present(alertController, animated:true)
                 }
             })
