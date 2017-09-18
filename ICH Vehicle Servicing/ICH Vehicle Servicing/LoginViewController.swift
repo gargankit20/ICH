@@ -84,9 +84,9 @@ class LoginViewController: UIViewController
         var alertController:UIAlertController?
         var validate=true
         
-        if !validateEmail(emailTxt.text!)
+        if emailTxt.text==""
         {
-            alertController=createAlert("Please enter a valid email")
+            alertController=createAlert("Please enter a valid email or username")
             validate=false
         }
         else if passwordTxt.text==""
